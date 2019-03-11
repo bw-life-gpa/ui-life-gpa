@@ -1,3 +1,4 @@
+//================================================================= Page Nav
 class TabLink {
   constructor(element) {
     this.element = element;
@@ -33,3 +34,6 @@ class TabItem {
 
 let links = document.querySelectorAll(`.link`).forEach(link => new TabLink(link));
 console.log(links);
+//=================================================================
+
+//================================================================= Carousel
