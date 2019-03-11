@@ -195,17 +195,70 @@ p {
 .wrapper .content {
   padding: 10px;
   margin: 5px auto;
-  border: 1px solid red;
   display: none;
 }
 .wrapper .change {
   display: block;
+}
+.wrapper .about .Carousel {
+  position: relative;
+  margin: 10px auto;
+  width: 300px;
+  height: 300px;
+  background: blue;
+  overflow: hidden;
+}
+.wrapper .about .Carousel .Carousel-Slide {
+  left: 0;
+  position: relative;
+  background: grey;
+  height: 100%;
+  transition: left 1s linear;
+}
+.wrapper .about .Carousel .Carousel-Slide .Carousel-Slide-item {
+  height: 100%;
+  float: left;
+}
+.wrapper .about .Carousel-Controller,
+.wrapper .about .Carousel-Controller-Nav {
+  box-sizing: border-box;
+  height: auto;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: 50%;
+}
+.wrapper .about .Carousel-Controller .Carousel-Controller-Nav-right,
+.wrapper .about .Carousel-Controller-Nav .Carousel-Controller-Nav-right {
+  float: right;
+}
+.wrapper .about [class^=Carousel-Controller-Nav-] {
+  color: white;
+  cursor: pointer;
+  width: auto;
+  float: left;
+  font-size: 30px;
+  height: 100%;
+}
+.wrapper .about [class^=Carousel-Controller-Nav-]:hover {
+  color: #000;
+}
+.wrapper .about #completed {
+  display: none;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+  letter-spacing: 1px;
 }
 .footer {
   padding: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background: #ECEFF0;
 }
 .footer .contact {
   padding: 10px;
