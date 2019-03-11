@@ -1,0 +1,33 @@
+@import './Variables/mixins.less';
+
+.header {
+    width: 100%;
+    height: 100%;
+    padding: 20% 15%;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: @navbackground;
+
+    .logo {
+        margin: 5px auto;
+        margin-right: 4%;
+        width: 200px;
+        height: 160px;
+    }
+
+    nav {
+        width: 300px;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+
+        button {
+            .cust-btn(150px,40px);
+        }
+    }
+}
