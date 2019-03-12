@@ -1,6 +1,6 @@
 .wrapper {
   margin: 0 auto;
-  margin-top: 480px;
+  margin-top: 150px;
   padding: 10px;
   
 
@@ -14,61 +14,99 @@
   }
 
   .about {
-    .Carousel{
-      position: relative;
-      margin: 10px auto;
+    .carousel-wrapper {
+      height: 200px;
       width: 300px;
-      height: 300px;
-      background: blue;
+      position: relative;
       overflow: hidden;
-    
-      .Carousel-Slide{
-        left: 0;
-        position: relative;
-        background: grey;
+      margin: 0 auto;
+
+
+      .button-wrapper {
+        width: 100%;
         height: 100%;
-        transition: left 1s linear;
-    
-        .Carousel-Slide-item{
-          height: 100%;
-          float: left;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+
+
+      .carousel {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease;
       }
-    }
-    .Carousel-Controller, .Carousel-Controller-Nav{
-      box-sizing: border-box;
-      height: auto;
-      left: 0;
-      width: 100%;
-      padding: 0 20px;
-      position: absolute;
-      top: 50%;
-    
-      .Carousel-Controller-Nav-right{
-        float: right;
+
+      .card {
+        background: black;
+        min-width: 200px;
+        height: 200px;
+        margin-right: 1rem;
+        display: inline-block;
       }
-    }
-    [class^=Carousel-Controller-Nav-]{
-      color: white;
-      cursor: pointer;
-      width: auto;
-      float:left;
-      font-size: 30px;
-      height: 100%;
-      &:hover{
-        color: #000;
-      }
-    }
+    }   
+}
+
+    // .Carousel{
+    //   position: relative;
+    //   margin: 10px auto;
+    //   width: 300px;
+    //   height: 300px;
+    //   background: blue;
+    //   overflow: hidden;
     
-    #completed{
-      display: none;
-      position: absolute;
-      top: 0;
-      text-align: center;
-      width: 100%;
-      color: white;
-      letter-spacing: 1px;
-    }
+    //   .Carousel-Slide{
+    //     left: 0;
+    //     position: relative;
+    //     background: grey;
+    //     height: 100%;
+    //     transition: left 1s linear;
+    
+    //     .Carousel-Slide-item{
+    //       height: 100%;
+    //       float: left;
+    //     }
+    //   }
+    // }
+    // .Carousel-Controller, .Carousel-Controller-Nav{
+    //   box-sizing: border-box;
+    //   height: auto;
+    //   left: 0;
+    //   width: 100%;
+    //   padding: 0 20px;
+    //   position: absolute;
+    //   top: 50%;
+    
+    //   .Carousel-Controller-Nav-right{
+    //     float: right;
+    //   }
+    // }
+    // [class^=Carousel-Controller-Nav-]{
+    //   color: @carouselNav;
+    //   cursor: pointer;
+    //   width: auto;
+    //   float:left;
+    //   font-size: 30px;
+    //   height: 100%;
+    //   &:hover{
+    //     color: #000;
+    //   }
+    // }
+    
+    // #completed{
+    //   display: none;
+    //   position: absolute;
+    //   top: 0;
+    //   text-align: center;
+    //   width: 100%;
+    //   color: white;
+    //   letter-spacing: 1px;
+    // }
   }
   
 
