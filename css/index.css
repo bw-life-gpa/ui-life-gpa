@@ -1,0 +1,289 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  background: #FAFAFA;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.6rem;
+}
+.header {
+  width: 100%;
+  height: 460px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+}
+.header .logo {
+  margin: 5px auto 10px;
+  width: 149px;
+  height: 120px;
+}
+.header .links {
+  width: 300px;
+  padding: 10px;
+  margin: 5px auto 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+.header .links .link {
+  width: 268px;
+  height: 47px;
+  margin: 2px auto;
+  border: solid 3px rgba(255, 235, 56, 0.836);
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 550;
+  color: #000000;
+  background-color: #FFEB38;
+  cursor: pointer;
+}
+.header .links .link :hover {
+  scale: 1.1px;
+}
+.wrapper {
+  margin: 0 auto;
+  margin-top: 480px;
+  padding: 10px;
+}
+.wrapper .content {
+  padding: 10px;
+  margin: 5px auto;
+  display: none;
+}
+.wrapper .change {
+  display: block;
+}
+.wrapper .about .Carousel {
+  position: relative;
+  margin: 10px auto;
+  width: 300px;
+  height: 300px;
+  background: blue;
+  overflow: hidden;
+}
+.wrapper .about .Carousel .Carousel-Slide {
+  left: 0;
+  position: relative;
+  background: grey;
+  height: 100%;
+  transition: left 1s linear;
+}
+.wrapper .about .Carousel .Carousel-Slide .Carousel-Slide-item {
+  height: 100%;
+  float: left;
+}
+.wrapper .about .Carousel-Controller,
+.wrapper .about .Carousel-Controller-Nav {
+  box-sizing: border-box;
+  height: auto;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: 50%;
+}
+.wrapper .about .Carousel-Controller .Carousel-Controller-Nav-right,
+.wrapper .about .Carousel-Controller-Nav .Carousel-Controller-Nav-right {
+  float: right;
+}
+.wrapper .about [class^=Carousel-Controller-Nav-] {
+  color: white;
+  cursor: pointer;
+  width: auto;
+  float: left;
+  font-size: 30px;
+  height: 100%;
+}
+.wrapper .about [class^=Carousel-Controller-Nav-]:hover {
+  color: #000;
+}
+.wrapper .about #completed {
+  display: none;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+  letter-spacing: 1px;
+}
+.footer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #ECEFF0;
+}
+.footer .contact {
+  padding: 10px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .contact p {
+  margin: 10px 0;
+}
+.footer .contact button {
+  width: 268px;
+  height: 47px;
+  margin: 2px auto;
+  border: solid 3px rgba(255, 235, 56, 0.836);
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 550;
+  color: #000000;
+  background-color: #FFEB38;
+  cursor: pointer;
+}
+.footer .contact button :hover {
+  scale: 1.1px;
+}

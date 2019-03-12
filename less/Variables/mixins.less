@@ -1,0 +1,25 @@
+@import './Variables/variables.less';
+
+
+.cust-btn(@width,@height){
+    width: @width;
+    height: @height;
+    margin: 2px auto;
+    border: solid 3px @border;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 550;
+    color: @text;
+    background-color: @background;
+    cursor: pointer;
+
+    :hover {
+        scale: 1.1px
+    }
+}
+
+.active(){
+    border: 1px solid red;
+}
