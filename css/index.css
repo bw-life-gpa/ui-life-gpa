@@ -141,18 +141,26 @@ h3 {
   font-size: 2rem;
 }
 p {
+  margin: 0.5rem;
   font-size: 1.6rem;
 }
 .dropdown {
   z-index: 2;
   position: absolute;
-  left: 10px;
+  right: 10px;
   cursor: pointer;
 }
 .dropdown .nav-btn {
   margin: 10px;
   width: 50px;
   height: 50px;
+  background: #FFEB38;
+  border-radius: 50px;
+}
+.dropdown .nav-btn:hover {
+  margin: 8px;
+  width: 52px;
+  height: 52px;
 }
 .dropdown .links {
   width: 300px;
@@ -162,6 +170,7 @@ p {
   position: absolute;
   z-index: 10;
   top: 70px;
+  right: 0;
   display: none;
   flex-wrap: wrap;
   justify-content: center;
@@ -182,11 +191,87 @@ p {
   background-color: #FFEB38;
   cursor: pointer;
 }
-.dropdown .link :hover {
-  scale: 1.1px;
+.dropdown .link:hover {
+  width: 270px;
+  height: 49px;
+  color: #FFEB38;
+  background-color: #000000;
 }
 .dropdown .dropdown-selected {
   display: flex;
+}
+.carousel-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+}
+.carousel-wrapper .Carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.carousel-wrapper .Carousel .Carousel-Slide {
+  left: 0;
+  position: relative;
+  background: grey;
+  transition: left 0.5s linear;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item {
+  float: left;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-Content {
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-image {
+  width: 40%;
+  height: 100%;
+  border: 1px solid red;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info {
+  width: 40%;
+  height: 100%;
+  border: 1px solid red;
+}
+.carousel-wrapper .Carousel-Controller,
+.carousel-wrapper .Carousel-Controller-Nav {
+  box-sizing: border-box;
+  height: auto;
+  left: 0;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+}
+.carousel-wrapper .Carousel-Controller .Carousel-Controller-Nav-right,
+.carousel-wrapper .Carousel-Controller-Nav .Carousel-Controller-Nav-right {
+  float: right;
+}
+.carousel-wrapper [class^="Carousel-Controller-Nav-"] {
+  color: #FFEB38;
+  cursor: pointer;
+  width: auto;
+  float: left;
+  font-size: 30px;
+  height: 100%;
+}
+.carousel-wrapper [class^="Carousel-Controller-Nav-"]:hover {
+  color: #000;
+}
+.carousel-wrapper #completed {
+  display: none;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+  letter-spacing: 1px;
 }
 .header {
   width: 100%;
@@ -201,15 +286,22 @@ p {
   flex-direction: column;
   background: #000000;
 }
+.header .logo-icon {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
 .header .logo {
-  margin: 10px auto;
+  margin: 10px;
   width: 200px;
   height: 50px;
 }
 .wrapper {
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 10px;
+  height: 100%;
+  z-index: 1;
 }
 .wrapper .content {
   padding: 10px;
@@ -219,39 +311,22 @@ p {
 .wrapper .change {
   display: block;
 }
-.wrapper .about .carousel-wrapper {
-  height: 200px;
-  width: 300px;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.wrapper .about .carousel-wrapper .button-wrapper {
+.navBG {
+  position: absolute;
+  top: 100px;
+  display: none;
+  z-index: 4;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
+  background: rgba(128, 128, 128, 0.418);
 }
-.wrapper .about .carousel-wrapper .button-wrapper .carousel {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
+.dropdown-selected2 {
   display: flex;
-  position: absolute;
-  left: 0;
-  transition: all 1s ease;
-}
-.wrapper .about .carousel-wrapper .button-wrapper .card {
-  background: black;
-  min-width: 200px;
-  height: 200px;
-  margin-right: 1rem;
-  display: inline-block;
 }
 .footer {
+  position: relative;
+  bottom: 0;
+  z-index: 6;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -282,6 +357,9 @@ p {
   background-color: #FFEB38;
   cursor: pointer;
 }
-.footer .contact button :hover {
-  scale: 1.1px;
+.footer .contact button:hover {
+  width: 270px;
+  height: 49px;
+  color: #FFEB38;
+  background-color: #000000;
 }

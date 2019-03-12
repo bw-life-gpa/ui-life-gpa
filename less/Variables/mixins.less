@@ -15,8 +15,11 @@
     background-color: @background;
     cursor: pointer;
 
-    :hover {
-        scale: 1.1px
+    &:hover {
+        width: @width+2px;
+        height: @height+2px;
+        color: @background;
+        background-color: @text;
     }
 }
 

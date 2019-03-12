@@ -1,21 +1,21 @@
 //================================================================= Carousel
 // transitionend event stuff
-var transitions = {
+let transitions = {
     'transition': 'transitionend',
     'OTransition': 'oTransitionEnd',
     'MozTransition': 'transitionend',
     'WebkitTransition': 'webkitTransitionEnd'
   };
-  var transitionEvent = 'NO_TRANSITION_EVENT';
-  var _elem = document.createElement('div');
-  var __t = null;
+  let transitionEvent = 'NO_TRANSITION_EVENT';
+  let _elem = document.createElement('div');
+  let __t = null;
   
   for (__t in transitions)
     if (_elem.style[__t] !== undefined)
         transitionEvent = transitions[__t];
   
   if (transitionEvent == 'NO_TRANSITION_EVENT') {
-    var transEvent = document.createEvent('Event');
+    let transEvent = document.createEvent('Event');
     transEvent.initEvent(transitionEvent, true, false);
   }
   
@@ -35,12 +35,12 @@ var transitions = {
   
   // Carousel stuff
   
-  var carousels = asNodeList.call(document.querySelectorAll('[data-carousel]'));
+  let carousels = asNodeList.call(document.querySelectorAll('[data-carousel]'));
   
   carousels.forEach(function(elem) {
-    var current = 0;
-    var carouselSlide = elem.querySelector('.Carousel-Slide');
-    var carouselSlideItems = asNodeList.call(
+    let current = 0;
+    let carouselSlide = elem.querySelector('.Carousel-Slide');
+    let carouselSlideItems = asNodeList.call(
         carouselSlide.querySelectorAll('.Carousel-Slide-item')
     );
   
@@ -49,7 +49,7 @@ var transitions = {
         width: (100 / carouselSlideItems.length) + '%'
     });
     carouselSlideItems.forEach(function(item) {
-        item.style.backgroundImage = item.getAttribute('data-background');
+        item.style.backgroundImage = item.getAttribute('src');
     });
   
     elem.querySelector('.Carousel-Controller-Nav-left')
