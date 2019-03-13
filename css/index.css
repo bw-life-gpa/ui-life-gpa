@@ -132,7 +132,7 @@ html {
 h1 {
   font-size: 3.5rem;
   font-weight: 500;
-  background: #FAFAFA;
+  background: #ECEFF0;
 }
 h2 {
   font-size: 2.5rem;
@@ -141,11 +141,141 @@ h3 {
   font-size: 2rem;
 }
 p {
+  margin: 0.5rem;
   font-size: 1.6rem;
+}
+.dropdown {
+  z-index: 2;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+.dropdown .nav-btn {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background: #FFEB38;
+  border-radius: 50px;
+}
+.dropdown .nav-btn:hover {
+  margin: 8px;
+  width: 52px;
+  height: 52px;
+}
+.dropdown .links {
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  margin: 10px;
+  position: absolute;
+  z-index: 10;
+  top: 70px;
+  right: 0;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+}
+.dropdown .link {
+  width: 268px;
+  height: 47px;
+  margin: 2px auto;
+  border: solid 3px darken #FFEB38;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 550;
+  color: #000000;
+  background-color: #FFEB38;
+  cursor: pointer;
+}
+.dropdown .link:hover {
+  width: 270px;
+  height: 49px;
+  color: #FFEB38;
+  background-color: #000000;
+}
+.dropdown .dropdown-selected {
+  display: flex;
+}
+.carousel-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+}
+.carousel-wrapper .Carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.carousel-wrapper .Carousel .Carousel-Slide {
+  left: 0;
+  position: relative;
+  background: grey;
+  transition: left 0.5s linear;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item {
+  float: left;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-Content {
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-image {
+  width: 40%;
+  height: 100%;
+  border: 1px solid red;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info {
+  width: 40%;
+  height: 100%;
+  border: 1px solid red;
+}
+.carousel-wrapper .Carousel-Controller,
+.carousel-wrapper .Carousel-Controller-Nav {
+  box-sizing: border-box;
+  height: auto;
+  left: 0;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+}
+.carousel-wrapper .Carousel-Controller .Carousel-Controller-Nav-right,
+.carousel-wrapper .Carousel-Controller-Nav .Carousel-Controller-Nav-right {
+  float: right;
+}
+.carousel-wrapper [class^="Carousel-Controller-Nav-"] {
+  color: #FFEB38;
+  cursor: pointer;
+  width: auto;
+  float: left;
+  font-size: 30px;
+  height: 100%;
+}
+.carousel-wrapper [class^="Carousel-Controller-Nav-"]:hover {
+  color: #000;
+}
+.carousel-wrapper #completed {
+  display: none;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+  letter-spacing: 1px;
 }
 .header {
   width: 100%;
-  height: 460px;
+  height: 100px;
   padding: 10px;
   position: absolute;
   top: 0;
@@ -156,41 +286,22 @@ p {
   flex-direction: column;
   background: #000000;
 }
+.header .logo-icon {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
 .header .logo {
-  margin: 5px auto 10px;
-  width: 149px;
-  height: 120px;
-}
-.header .links {
-  width: 300px;
-  padding: 10px;
-  margin: 5px auto 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-}
-.header .links .link {
-  width: 268px;
-  height: 47px;
-  margin: 2px auto;
-  border: solid 3px rgba(255, 235, 56, 0.836);
-  border-radius: 4px;
-  padding: 0.5em 1em;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 550;
-  color: #000000;
-  background-color: #FFEB38;
-  cursor: pointer;
-}
-.header .links .link :hover {
-  scale: 1.1px;
+  margin: 10px;
+  width: 200px;
+  height: 50px;
 }
 .wrapper {
   margin: 0 auto;
-  margin-top: 480px;
+  margin-top: 100px;
   padding: 10px;
+  height: 100%;
+  z-index: 1;
 }
 .wrapper .content {
   padding: 10px;
@@ -200,60 +311,22 @@ p {
 .wrapper .change {
   display: block;
 }
-.wrapper .about .Carousel {
-  position: relative;
-  margin: 10px auto;
-  width: 300px;
-  height: 300px;
-  background: blue;
-  overflow: hidden;
-}
-.wrapper .about .Carousel .Carousel-Slide {
-  left: 0;
-  position: relative;
-  background: grey;
-  height: 100%;
-  transition: left 1s linear;
-}
-.wrapper .about .Carousel .Carousel-Slide .Carousel-Slide-item {
-  height: 100%;
-  float: left;
-}
-.wrapper .about .Carousel-Controller,
-.wrapper .about .Carousel-Controller-Nav {
-  box-sizing: border-box;
-  height: auto;
-  left: 0;
-  width: 100%;
-  padding: 0 20px;
+.navBG {
   position: absolute;
-  top: 50%;
-}
-.wrapper .about .Carousel-Controller .Carousel-Controller-Nav-right,
-.wrapper .about .Carousel-Controller-Nav .Carousel-Controller-Nav-right {
-  float: right;
-}
-.wrapper .about [class^=Carousel-Controller-Nav-] {
-  color: white;
-  cursor: pointer;
-  width: auto;
-  float: left;
-  font-size: 30px;
-  height: 100%;
-}
-.wrapper .about [class^=Carousel-Controller-Nav-]:hover {
-  color: #000;
-}
-.wrapper .about #completed {
+  top: 100px;
   display: none;
-  position: absolute;
-  top: 0;
-  text-align: center;
+  z-index: 4;
   width: 100%;
-  color: white;
-  letter-spacing: 1px;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.418);
+}
+.dropdown-selected2 {
+  display: flex;
 }
 .footer {
+  position: relative;
+  bottom: 0;
+  z-index: 6;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -274,7 +347,7 @@ p {
   width: 268px;
   height: 47px;
   margin: 2px auto;
-  border: solid 3px rgba(255, 235, 56, 0.836);
+  border: solid 3px darken #FFEB38;
   border-radius: 4px;
   padding: 0.5em 1em;
   font-family: 'Rajdhani', sans-serif;
@@ -284,6 +357,9 @@ p {
   background-color: #FFEB38;
   cursor: pointer;
 }
-.footer .contact button :hover {
-  scale: 1.1px;
+.footer .contact button:hover {
+  width: 270px;
+  height: 49px;
+  color: #FFEB38;
+  background-color: #000000;
 }

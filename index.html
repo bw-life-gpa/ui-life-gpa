@@ -2,10 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title></title>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -17,23 +22,38 @@
       rel="stylesheet"
     />
     <script defer="defer" src="js/main.js"></script>
+    <script defer="defer" src="js/dropdown.js"></script>
+    <script defer="defer" src="js/carousel.js"></script>
   </head>
   <body>
     <!-- Header/Nav -->
     <div class="header">
+      <div class="dropdown">
+        <img
+          class="nav-btn"
+          src="./Components/images/TWalsh__menu2-512.png"
+          alt="navigation button"
+        />
+        <div class="links">
+          <button class="link" data-tab="1">Home</button>
+          <button class="link" data-tab="2">About</button>
+          <button class="link" data-tab="3">Contact</button>
+          <button class="link" href="#">Login</button>
+        </div>
+      </div>
+      <img
+        class="logo-icon"
+        src="./Components/images/1552407133711.png"
+        alt="navigation button"
+      />
       <img
         class="logo"
-        src="./Components/images/f655fcbf0b8afd98c48fe3ee90d742a3.png"
+        src="./Components/images/1552407177530.png"
         alt="logo"
       />
-      <div class="links">
-        <button class="link" data-tab="1">Home</button>
-        <button class="link" data-tab="2">About</button>
-        <button class="link" data-tab="3">Contact</button>
-        <button class="link" href="#">Login</button>
-      </div>
     </div>
     <div class="wrapper">
+
       <!-- Home Page -->
       <div class="home content" data-tab="1">
         <section class="body">
@@ -83,13 +103,45 @@
               quibusdam dolores inventore ab animi!
             </p>
           </section>
-          <section class="carousel">
-              <div data-carousel="blah" class="Carousel">
+          <section class="carousel-wrapper">
+            <div data-carousel="blah" class="Carousel">
                   <div class="Carousel-Slide clearfix">
-                      <div class="Carousel-Slide-item" data-background="url(http://lorempixel.com/1600/1000/abstract/1/)"></div>
-                      <div class="Carousel-Slide-item" data-background="url(http://lorempixel.com/1600/1000/abstract/2/)"></div>
-                      <div class="Carousel-Slide-item" data-background="url(http://lorempixel.com/1600/1000/abstract/3/)"></div>
-                      <div class="Carousel-Slide-item" data-background="url(http://lorempixel.com/1600/1000/abstract/4/)"></div>
+                      <div class="Carousel-Slide-item">
+                        <div class="Carousel-Slide-Content">
+                          <img class="Carousel-Slide-image" src="./Components/images/Login page.png"></img>
+                          <div class="Carousel-Slide-info">
+                            <h3>Getting Started</h3>
+                            <p>It's easier than you think!</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="Carousel-Slide-item">
+                        <div class="Carousel-Slide-Content">
+                            <img class="Carousel-Slide-image" src="./Components/images/Login page.png"></img>
+                            <div class="Carousel-Slide-info">
+                              <h3>Getting Started</h3>
+                              <p>It's easier than you think!</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="Carousel-Slide-item">
+                        <div class="Carousel-Slide-Content">
+                              <img class="Carousel-Slide-image" src="./Components/images/Login page.png"></img>
+                              <div class="Carousel-Slide-info">
+                                <h3>Getting Started</h3>
+                                <p>It's easier than you think!</p>
+                              </div>
+                        </div>
+                      </div>
+                      <div class="Carousel-Slide-item">
+                        <div class="Carousel-Slide-Content">
+                                <img class="Carousel-Slide-image" src="./Components/images/Login page.png"></img>
+                                <div class="Carousel-Slide-info">
+                                  <h3>Getting Started</h3>
+                                  <p>It's easier than you think!</p>
+                                </div>
+                        </div>
+                      </div>
                   </div>
                   <div class="Carousel-Controller">
                       <div class="Carousel-Controller-Nav">
@@ -180,7 +232,10 @@
           </section>
         </section>
       </div>
+      <!-- navBG -->
+      <div class="navBG"></div>
     </div>
+
     <!-- Footer -->
     <div class="footer">
       <section class="contact">
