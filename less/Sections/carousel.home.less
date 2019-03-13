@@ -1,9 +1,14 @@
-.carousel-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    margin: 20px auto;
+
+  .home {
+    .carousel-wrapper {
+      background-image: url("../../Components/home/yellow-and-black-corporate-art-background-vector-3158800.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
 
     .Carousel {
       width: 100%;
@@ -37,23 +42,12 @@
             width: 40%;
             height:100%;
             //.active();
-            animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
           }
 
           .Carousel-Slide-info {
-            display:flex;
-            flex-wrap: wrap;
-            width: 300px;
+            width: 0%;
             height:100%;
             //.active();
-            h1{
-              background:none;
-              color: @companyYellow;
-            }
-            img {
-              width:60px;
-              height:30px;
-            }
           }
         }
       }
@@ -90,7 +84,8 @@
       top: 0;
       text-align: center;
       width: 100%;
-      color: white;
+      color: rgba(255, 255, 255, 0);
       letter-spacing: 1px;
     }
+  }
   }

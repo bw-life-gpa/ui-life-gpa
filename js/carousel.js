@@ -83,10 +83,10 @@ let transitions = {
     }
   });
 
-    window.setInterval(function() {
-    document.getElementById('about-right').click();
-    }, 7000);
+    // window.setInterval(function() {
+    // document.getElementById('about-right').click();
+    // }, 3000);
 
-    window.setInterval(function() {
-        document.getElementById('home-right').click();
-        }, 2000);
+    // window.setInterval(function() {
+    //     document.getElementById('home-right').click();
+    //     }, 5000);

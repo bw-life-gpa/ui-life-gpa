@@ -129,6 +129,9 @@ html {
   font-family: 'Rajdhani', sans-serif;
   font-size: 62.5%;
 }
+body {
+  min-width: 350px;
+}
 h1 {
   font-size: 3.5rem;
   font-weight: 500;
@@ -143,6 +146,32 @@ h3 {
 p {
   margin: 0.5rem;
   font-size: 1.6rem;
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.slide-in-bottom {
+  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-out-bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+}
+.slide-out-bottom {
+  animation: slide-out-bottom 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
 }
 .dropdown {
   z-index: 2;
@@ -200,6 +229,125 @@ p {
 .dropdown .dropdown-selected {
   display: flex;
 }
+.home .carousel-wrapper {
+  background-image: url("../../Components/home/yellow-and-black-corporate-art-background-vector-3158800.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.home .carousel-wrapper .Carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.home .carousel-wrapper .Carousel .Carousel-Slide {
+  left: 0;
+  position: relative;
+  background: grey;
+  transition: left 0.5s linear;
+}
+.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item {
+  float: left;
+}
+.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-Content {
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button {
+  width: 90%;
+  height: 20%;
+  margin: 2px auto;
+  border: solid 3px darken #FFEB38;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 550;
+  color: #000000;
+  background-color: #FFEB38;
+  cursor: pointer;
+  margin: 0 5%;
+}
+.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button:hover {
+  width: 92%;
+  height: 22%;
+  color: #FFEB38;
+  background-color: #000000;
+}
+.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-image {
+  width: 40%;
+  height: 100%;
+}
+.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info {
+  width: 0%;
+  height: 100%;
+}
+.home .carousel-wrapper .Carousel-Controller,
+.home .carousel-wrapper .Carousel-Controller-Nav {
+  box-sizing: border-box;
+  height: auto;
+  left: 0;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+}
+.home .carousel-wrapper .Carousel-Controller .Carousel-Controller-Nav-right,
+.home .carousel-wrapper .Carousel-Controller-Nav .Carousel-Controller-Nav-right {
+  float: right;
+}
+.home .carousel-wrapper [class^="Carousel-Controller-Nav-"] {
+  color: #FFEB38;
+  cursor: pointer;
+  width: auto;
+  float: left;
+  font-size: 30px;
+  height: 100%;
+}
+.home .carousel-wrapper [class^="Carousel-Controller-Nav-"]:hover {
+  color: #000;
+}
+.home .carousel-wrapper #completed {
+  display: none;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  color: rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+}
+.header .logo-icon {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
+.header .logo {
+  margin: 10px;
+  margin-left: -50px;
+  width: 200px;
+  height: 50px;
+}
 .carousel-wrapper {
   width: 100%;
   height: 100%;
@@ -231,7 +379,7 @@ p {
 }
 .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button {
   width: 90%;
-  height: 25%;
+  height: 20%;
   margin: 2px auto;
   border: solid 3px darken #FFEB38;
   border-radius: 4px;
@@ -242,22 +390,32 @@ p {
   color: #000000;
   background-color: #FFEB38;
   cursor: pointer;
+  margin: 0 5%;
 }
 .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button:hover {
   width: 92%;
-  height: 27%;
+  height: 22%;
   color: #FFEB38;
   background-color: #000000;
 }
 .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-image {
   width: 40%;
   height: 100%;
-  border: 1px solid red;
+  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info {
-  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
   height: 100%;
-  border: 1px solid red;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info h1 {
+  background: none;
+  color: #FFEB38;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info img {
+  width: 60px;
+  height: 30px;
 }
 .carousel-wrapper .Carousel-Controller,
 .carousel-wrapper .Carousel-Controller-Nav {
@@ -293,48 +451,49 @@ p {
   color: white;
   letter-spacing: 1px;
 }
-.header {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  z-index: 5;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  background: #000000;
-}
-.header .logo-icon {
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-}
-.header .logo {
-  margin: 10px;
-  width: 200px;
-  height: 50px;
-}
 .wrapper {
-  margin: 0 auto;
   margin-top: 100px;
-  padding: 10px;
   height: 100%;
   z-index: 1;
 }
 .wrapper .content {
-  padding: 10px;
-  margin: 5px auto;
   display: none;
 }
 .wrapper .change {
   display: block;
 }
+.wrapper .home .landing {
+  padding: 10px;
+  padding-top: 30px;
+  position: relative;
+  top: -33px;
+  background: #FECE22;
+}
 .wrapper .contact .main-cont img {
   width: 50px;
   height: 50px;
   border-radius: 25px;
+}
+.wrapper .contact .main-cont button {
+  margin: 0 auto;
+  width: 268px;
+  height: 47px;
+  margin: 2px auto;
+  border: solid 3px darken #FFEB38;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 550;
+  color: #000000;
+  background-color: #FFEB38;
+  cursor: pointer;
+}
+.wrapper .contact .main-cont button:hover {
+  width: 270px;
+  height: 49px;
+  color: #FFEB38;
+  background-color: #000000;
 }
 .navBG {
   position: absolute;
@@ -344,7 +503,10 @@ p {
   z-index: 4;
   width: 100%;
   height: 100%;
-  background: rgba(128, 128, 128, 0.418);
+  background-image: url("../../Components/images/DropDownCover.jpg");
+  opacity: 0.1;
+  background-position: center;
+  background-size: cover;
 }
 .dropdown-selected2 {
   display: flex;
