@@ -1,4 +1,4 @@
-//================================================================= Carousel
+//=========================================== Carousel
 // transitionend event stuff
 let transitions = {
     'transition': 'transitionend',
@@ -82,4 +82,11 @@ let transitions = {
             elem.dispatchEvent(transEvent);
     }
   });
-  
+
+    window.setInterval(function() {
+    document.getElementById('about-right').click();
+    }, 7000);
+
+    window.setInterval(function() {
+        document.getElementById('home-right').click();
+        }, 2000);

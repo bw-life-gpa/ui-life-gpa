@@ -229,6 +229,26 @@ p {
   justify-content: space-evenly;
   align-items: center;
 }
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button {
+  width: 90%;
+  height: 25%;
+  margin: 2px auto;
+  border: solid 3px darken #FFEB38;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 550;
+  color: #000000;
+  background-color: #FFEB38;
+  cursor: pointer;
+}
+.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button:hover {
+  width: 92%;
+  height: 27%;
+  color: #FFEB38;
+  background-color: #000000;
+}
 .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-image {
   width: 40%;
   height: 100%;
@@ -311,8 +331,14 @@ p {
 .wrapper .change {
   display: block;
 }
+.wrapper .contact .main-cont img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
 .navBG {
   position: absolute;
+  left: 0px;
   top: 100px;
   display: none;
   z-index: 4;
