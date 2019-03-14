@@ -130,22 +130,59 @@ html {
   font-size: 62.5%;
 }
 body {
-  min-width: 350px;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  background-color: grey;
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
 }
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
+  line-height: 4.8rem;
   font-weight: 500;
   background: #ECEFF0;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 p {
   margin: 0.5rem;
-  font-size: 1.6rem;
+  font-size: 2.1rem;
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Sans Italic'), local('PTSans-Italic'), url(https://fonts.gstatic.com/s/ptsans/v10/jizYRExUiTo99u79D0e0x8mN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(https://fonts.gstatic.com/s/ptsans/v10/jizdRExUiTo99u79D0e8fOydLxUY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v10/jizaRExUiTo99u79D0KEwA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://fonts.gstatic.com/s/ptsans/v10/jizfRExUiTo99u79B_mh0O6tKA.ttf) format('truetype');
+}
+.width-100 {
+  width: 100%;
+}
+.border-bottom-grey {
+  border-bottom: 1px solid grey;
 }
 @keyframes slide-in-bottom {
   0% {
@@ -173,6 +210,80 @@ p {
 .slide-out-bottom {
   animation: slide-out-bottom 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
 }
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../../Images/black-and-yellow-wallpaper-11-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.carousel .left-button,
+.carousel .right-button {
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  color: white;
+  font-size: 40px;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+.carousel .left-button:hover,
+.carousel .right-button:hover {
+  color: black;
+  background: yellow;
+}
+.carousel .left-button {
+  top: 50%;
+  left: 25px;
+}
+.carousel .right-button {
+  top: 50%;
+  right: 25px;
+  transform: translate(0, -50%);
+}
+.carousel .slide {
+  width: 50%;
+  height: 100%;
+  margin: 0 40px;
+  display: none;
+}
+.carousel .slide .slide-image {
+  width: 300px;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  position: relative;
+  bottom: -10px;
+}
+.carousel .slide .splash-info {
+  margin: 10px auto;
+  height: 284px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 300px;
+  justify-content: center;
+}
+.carousel .slide .splash-info h1 {
+  background: none;
+  font-weight: 800;
+  color: #FFEB38;
+}
+.carousel .slide .splash-info h2,
+.carousel .slide .splash-info p {
+  color: #ECEFF0;
+}
+.carousel .slide .splash-info img {
+  margin: 10px;
+}
 .dropdown {
   z-index: 2;
   position: absolute;
@@ -181,6 +292,7 @@ p {
 }
 .dropdown .nav-btn {
   margin: 10px;
+  padding: 2px;
   width: 50px;
   height: 50px;
   background: #FFEB38;
@@ -229,101 +341,6 @@ p {
 .dropdown .dropdown-selected {
   display: flex;
 }
-.home .carousel-wrapper {
-  background-image: url("../../Components/home/yellow-and-black-corporate-art-background-vector-3158800.jpg");
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.home .carousel-wrapper .Carousel {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.home .carousel-wrapper .Carousel .Carousel-Slide {
-  left: 0;
-  position: relative;
-  background: grey;
-  transition: left 0.5s linear;
-}
-.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item {
-  float: left;
-}
-.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-Content {
-  margin: 0 40px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button {
-  width: 90%;
-  height: 20%;
-  margin: 2px auto;
-  border: solid 3px darken #FFEB38;
-  border-radius: 4px;
-  padding: 0.5em 1em;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 550;
-  color: #000000;
-  background-color: #FFEB38;
-  cursor: pointer;
-  margin: 0 5%;
-}
-.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button:hover {
-  width: 92%;
-  height: 22%;
-  color: #FFEB38;
-  background-color: #000000;
-}
-.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-image {
-  width: 40%;
-  height: 100%;
-}
-.home .carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info {
-  width: 0%;
-  height: 100%;
-}
-.home .carousel-wrapper .Carousel-Controller,
-.home .carousel-wrapper .Carousel-Controller-Nav {
-  box-sizing: border-box;
-  height: auto;
-  left: 0;
-  width: 100%;
-  padding: 0 10px;
-  position: absolute;
-  top: 50%;
-}
-.home .carousel-wrapper .Carousel-Controller .Carousel-Controller-Nav-right,
-.home .carousel-wrapper .Carousel-Controller-Nav .Carousel-Controller-Nav-right {
-  float: right;
-}
-.home .carousel-wrapper [class^="Carousel-Controller-Nav-"] {
-  color: #FFEB38;
-  cursor: pointer;
-  width: auto;
-  float: left;
-  font-size: 30px;
-  height: 100%;
-}
-.home .carousel-wrapper [class^="Carousel-Controller-Nav-"]:hover {
-  color: #000;
-}
-.home .carousel-wrapper #completed {
-  display: none;
-  position: absolute;
-  top: 0;
-  text-align: center;
-  width: 100%;
-  color: rgba(255, 255, 255, 0);
-  letter-spacing: 1px;
-}
 .header {
   width: 100%;
   height: 100px;
@@ -342,158 +359,45 @@ p {
   width: 50px;
   height: 50px;
 }
-.header .logo {
+.header .logo-tm {
   margin: 10px;
   margin-left: -50px;
   width: 200px;
   height: 50px;
 }
-.carousel-wrapper {
+.content {
   width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  margin: 20px auto;
-}
-.carousel-wrapper .Carousel {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.carousel-wrapper .Carousel .Carousel-Slide {
-  left: 0;
-  position: relative;
-  background: grey;
-  transition: left 0.5s linear;
-}
-.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item {
-  float: left;
-}
-.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-Content {
-  margin: 0 40px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button {
-  width: 90%;
-  height: 20%;
-  margin: 2px auto;
-  border: solid 3px darken #FFEB38;
-  border-radius: 4px;
-  padding: 0.5em 1em;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 550;
-  color: #000000;
-  background-color: #FFEB38;
-  cursor: pointer;
-  margin: 0 5%;
-}
-.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item button:hover {
-  width: 92%;
-  height: 22%;
-  color: #FFEB38;
-  background-color: #000000;
-}
-.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-image {
-  width: 40%;
-  height: 100%;
-  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info {
-  display: flex;
-  flex-wrap: wrap;
-  width: 300px;
-  height: 100%;
-}
-.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info h1 {
-  background: none;
-  color: #FFEB38;
-}
-.carousel-wrapper .Carousel .Carousel-Slide .Carousel-Slide-item .Carousel-Slide-info img {
-  width: 60px;
-  height: 30px;
-}
-.carousel-wrapper .Carousel-Controller,
-.carousel-wrapper .Carousel-Controller-Nav {
-  box-sizing: border-box;
-  height: auto;
-  left: 0;
-  width: 100%;
-  padding: 0 10px;
-  position: absolute;
-  top: 50%;
-}
-.carousel-wrapper .Carousel-Controller .Carousel-Controller-Nav-right,
-.carousel-wrapper .Carousel-Controller-Nav .Carousel-Controller-Nav-right {
-  float: right;
-}
-.carousel-wrapper [class^="Carousel-Controller-Nav-"] {
-  color: #FFEB38;
-  cursor: pointer;
-  width: auto;
-  float: left;
-  font-size: 30px;
-  height: 100%;
-}
-.carousel-wrapper [class^="Carousel-Controller-Nav-"]:hover {
-  color: #000;
-}
-.carousel-wrapper #completed {
-  display: none;
-  position: absolute;
-  top: 0;
-  text-align: center;
-  width: 100%;
-  color: white;
-  letter-spacing: 1px;
-}
-.wrapper {
   margin-top: 100px;
   height: 100%;
   z-index: 1;
-}
-.wrapper .content {
   display: none;
 }
-.wrapper .change {
+.change {
   display: block;
 }
-.wrapper .home .landing {
+.landing {
   padding: 10px;
   padding-top: 30px;
   position: relative;
-  top: -33px;
-  background: #FECE22;
+  z-index: 2;
+  background: #FEF432;
 }
-.wrapper .contact .main-cont img {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-}
-.wrapper .contact .main-cont button {
+.main-cont {
+  text-align: center;
   margin: 0 auto;
-  width: 268px;
-  height: 47px;
-  margin: 2px auto;
-  border: solid 3px darken #FFEB38;
-  border-radius: 4px;
-  padding: 0.5em 1em;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 550;
-  color: #000000;
-  background-color: #FFEB38;
-  cursor: pointer;
+  max-width: 1200px;
+  padding: 10px;
+  position: relative;
+  z-index: 3;
+  background: white;
 }
-.wrapper .contact .main-cont button:hover {
-  width: 270px;
-  height: 49px;
-  color: #FFEB38;
-  background-color: #000000;
+.main-cont .call-to-action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-cont .call-to-action img {
+  margin: 10px;
 }
 .navBG {
   position: absolute;
@@ -503,7 +407,7 @@ p {
   z-index: 4;
   width: 100%;
   height: 100%;
-  background-image: url("../../Components/images/DropDownCover.jpg");
+  background-image: url("../../Images/DropDownCover.jpg");
   opacity: 0.1;
   background-position: center;
   background-size: cover;

@@ -1,92 +1,81 @@
-//=========================================== Carousel
-// transitionend event stuff
-let transitions = {
-    'transition': 'transitionend',
-    'OTransition': 'oTransitionEnd',
-    'MozTransition': 'transitionend',
-    'WebkitTransition': 'webkitTransitionEnd'
-  };
-  let transitionEvent = 'NO_TRANSITION_EVENT';
-  let _elem = document.createElement('div');
-  let __t = null;
-  
-  for (__t in transitions)
-    if (_elem.style[__t] !== undefined)
-        transitionEvent = transitions[__t];
-  
-  if (transitionEvent == 'NO_TRANSITION_EVENT') {
-    let transEvent = document.createEvent('Event');
-    transEvent.initEvent(transitionEvent, true, false);
+class Carousel {
+  constructor(carousel) {
+    this.Carousel = carousel;
+    // Buttons
+    this.leftBtn = this.Carousel.querySelector(".left-button");
+    this.rightBtn = this.Carousel.querySelector(".right-button");
+    //Slide Container
+    this.slide = Array.from(this.Carousel.querySelectorAll(".slide"));
+    this.currentSlideIndex = 0;
+    this.slide[this.currentSlideIndex].style.display = "flex";
+    this.slide[this.currentSlideIndex].style.opacity = 1;
+    //Images
+    this.images = Array.from(this.Carousel.querySelectorAll(".slide-image"));
+    this.currentImgIndex = 0;
+    this.images[this.currentImgIndex].style.display = "flex";
+    this.images[this.currentImgIndex].style.opacity = 1;
+    //Splash Information
+    this.splash = Array.from(this.Carousel.querySelectorAll(".splash-info"));
+    this.currentSplashIndex = 0;
+    this.splash[this.currentSplashIndex].style.display = "flex";
+    this.splash[this.currentSplashIndex].style.opacity = 1;
+    //Event Listeners
+    this.leftBtn.addEventListener("click", () => this.setActiveImg("left"));
+    this.rightBtn.addEventListener("click", () => this.setActiveImg("right"));
   }
-  
-  // helper mixins
-  
-  function asNodeList() {
-    this.forEach = function(cb) {
-        [].forEach.call(this, cb);
-    };
-    this.css = function(cssObj) {
-        this.forEach(function(node) {
-            for (var style in cssObj) node.style[style] = cssObj[style];
-        });
-    };
-    return this;
-  }
-  
-  // Carousel stuff
-  
-  let carousels = asNodeList.call(document.querySelectorAll('[data-carousel]'));
-  
-  carousels.forEach(function(elem) {
-    let current = 0;
-    let carouselSlide = elem.querySelector('.Carousel-Slide');
-    let carouselSlideItems = asNodeList.call(
-        carouselSlide.querySelectorAll('.Carousel-Slide-item')
+  setActiveImg(direction) {
+    // Active Slide
+    this.slide.forEach(slide =>
+      TweenMax.to(slide, 0, { display: "none", opacity: 0 })
     );
-  
-    carouselSlide.style.width = (carouselSlideItems.length * 100) + '%';
-    carouselSlideItems.css({
-        width: (100 / carouselSlideItems.length) + '%'
-    });
-    carouselSlideItems.forEach(function(item) {
-        item.style.backgroundImage = item.getAttribute('src');
-    });
-  
-    elem.querySelector('.Carousel-Controller-Nav-left')
-        .addEventListener('click', function(e) {
-            current--;
-            slide(current);
-        });
-    elem.querySelector('.Carousel-Controller-Nav-right')
-        .addEventListener('click', function(e) {
-            current++;
-            slide(current);
-        });
-  
-    elem.addEventListener(transitionEvent, (function() {
-        var completedElem = document.getElementById('completed');
-        return function(e) {
-            completedElem.style.display = 'block';
-            setTimeout(function() {
-                completedElem.style.display = 'none';
-            }, 500);
-        }
-    })());
-  
-    function slide(place) {
-        if (current < 0) current = carouselSlideItems.length - 1;
-        else if (current >= carouselSlideItems.length) current = 0;
-        carouselSlide.style.left = -(current * 100) + '%';
-  
-        if (transitionEvent == 'NO_TRANSITION_EVENT')
-            elem.dispatchEvent(transEvent);
+    // Acitve Image
+    this.images.forEach(img =>
+      TweenMax.to(img, 0, { display: "none", opacity: 0 })
+    );
+    // Acitve Image
+    this.splash.forEach(splash =>
+      TweenMax.to(splash, 0, { display: "none", opacity: 0 })
+    );
+
+    // Set currentImgIndex based on which button was clicked
+    if (direction === "left") {
+      if (this.currentImgIndex === 0) {
+        this.currentImgIndex = this.images.length - 1;
+        this.currentSlideIndex = this.slide.length - 1;
+        this.currentSplashIndex = this.slide.length - 1; 
+      } else {
+        this.currentImgIndex -= 1;
+        this.currentSlideIndex -= 1;
+        this.currentSplashIndex -= 1;
+      }
+    } else if (direction === "right") {
+      if (this.currentImgIndex === this.images.length - 1) {
+        this.currentImgIndex = 0;
+        this.currentSlideIndex = 0;
+        this.currentSplashIndex = 0;
+      } else {
+        this.currentImgIndex += 1;
+        this.currentSlideIndex += 1;
+        this.currentSplashIndex += 1;
+      }
     }
-  });
+    // GSAP: Fades in active image by applying styles directly
+    //Slide
+    TweenMax.to(this.slide[this.currentSlideIndex], 0, { display: "flex" });
+    TweenMax.to(this.slide[this.currentSlideIndex], 0.5, { opacity: 1 });
+    //Image
+    TweenMax.to(this.images[this.currentImgIndex], 0, { display: "flex" });
+    TweenMax.to(this.images[this.currentImgIndex], 0.5, { opacity: 1 });
+    TweenMax.to(this.images[this.currentImgIndex], 0, {y:200});
+    TweenMax.to(this.images[this.currentImgIndex], 2, {y:0});
+    //Info
+    TweenMax.to(this.splash[this.currentSplashIndex], 0, { display: "flex" });
+    TweenMax.to(this.splash[this.currentSplashIndex], 0.5, { opacity: 1 });
+    TweenMax.to(this.splash[this.currentSplashIndex], 0, {x:200});
+    TweenMax.to(this.splash[this.currentSplashIndex], 2, {x:0});
+  }
+}
 
-    // window.setInterval(function() {
-    // document.getElementById('about-right').click();
-    // }, 3000);
-
-    // window.setInterval(function() {
-    //     document.getElementById('home-right').click();
-    //     }, 5000);
+let carousels = document
+  .querySelectorAll(".carousel")
+  .forEach(carousel => new Carousel(carousel));
