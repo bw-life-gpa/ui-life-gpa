@@ -1,5 +1,4 @@
 
-
 .content {
   width: 100%;
   margin-top: 100px;
@@ -42,9 +41,20 @@
     justify-content: center;
     .review{
       margin: 20px;
-      width:200px;
+      width:275px;
       height:200px;
     }
+    .male {
+      background-image: url("../../Images/reviewCards/Male-Full-Card.png");
+      background-position: center;
+      background-size: cover;
+    }
+    .female {
+      background-image: url("../../Images/reviewCards/Female-Full-Card.png");
+      background-position: center;
+      background-size: cover;
+    }
+    
   }
   
 }
@@ -56,6 +66,7 @@
   padding: 40px;
   background: @reviewHeaderBG;
 }
+
 .profile-page {
     display: flex;
     flex-wrap: wrap;
@@ -69,7 +80,13 @@
       }
     }
 }
+.icon {
+  i{
+    width: 30px;
+    height: 30px;
+  }
   
+}
 
 .navBG {
   position: absolute;

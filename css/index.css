@@ -411,8 +411,18 @@ q {
 }
 .main-cont .reviews .review {
   margin: 20px;
-  width: 200px;
+  width: 275px;
   height: 200px;
+}
+.main-cont .reviews .male {
+  background-image: url("../../Images/reviewCards/Male-Full-Card.png");
+  background-position: center;
+  background-size: cover;
+}
+.main-cont .reviews .female {
+  background-image: url("../../Images/reviewCards/Female-Full-Card.png");
+  background-position: center;
+  background-size: cover;
 }
 .panel {
   margin: 40px auto;
@@ -434,6 +444,10 @@ q {
   width: 150px;
   height: 150px;
   border-radius: 75px;
+}
+.icon i {
+  width: 30px;
+  height: 30px;
 }
 .navBG {
   position: absolute;
