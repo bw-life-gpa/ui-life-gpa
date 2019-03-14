@@ -15,7 +15,7 @@
   padding-top: 30px;
   position: relative;
   z-index: 2;
-  background: @HomePageBG;
+  background: @h1BG;
 }
 .main-cont {
   text-align: center;
@@ -24,7 +24,7 @@
   padding: 10px;
   position: relative;
   z-index: 3;
-  background: white;
+  background: @h1BG;
 
   .call-to-action {
     display: flex;
@@ -34,7 +34,43 @@
       margin: 10px;
     }
   }
+  .reviews {
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .review{
+      margin: 20px;
+      width:200px;
+      height:200px;
+    }
+  }
+  
 }
+.panel {
+  margin: 40px auto;
+}
+.review-header {
+  color: @h1BG;
+  padding: 40px;
+  background: @reviewHeaderBG;
+}
+.profile-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .profile {
+      width: 500px;
+      img{
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+      }
+    }
+}
+  
+
 .navBG {
   position: absolute;
   left: 0px;

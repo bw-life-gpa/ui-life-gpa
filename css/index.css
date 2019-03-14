@@ -142,7 +142,6 @@ h1 {
   font-size: 3.8rem;
   line-height: 4.8rem;
   font-weight: 500;
-  background: #ECEFF0;
 }
 h2 {
   font-size: 3.2rem;
@@ -153,6 +152,10 @@ h3 {
 p {
   margin: 0.5rem;
   font-size: 2.1rem;
+}
+q {
+  margin: 0.5rem;
+  font-size: 1.8rem;
 }
 @font-face {
   font-family: 'PT Sans';
@@ -279,7 +282,7 @@ p {
 }
 .carousel .slide .splash-info h2,
 .carousel .slide .splash-info p {
-  color: #ECEFF0;
+  color: #fdfcfc;
 }
 .carousel .slide .splash-info img {
   margin: 10px;
@@ -380,7 +383,7 @@ p {
   padding-top: 30px;
   position: relative;
   z-index: 2;
-  background: #FEF432;
+  background: #fdfcfc;
 }
 .main-cont {
   text-align: center;
@@ -389,7 +392,7 @@ p {
   padding: 10px;
   position: relative;
   z-index: 3;
-  background: white;
+  background: #fdfcfc;
 }
 .main-cont .call-to-action {
   display: flex;
@@ -398,6 +401,39 @@ p {
 }
 .main-cont .call-to-action img {
   margin: 10px;
+}
+.main-cont .reviews {
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-cont .reviews .review {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+}
+.panel {
+  margin: 40px auto;
+}
+.review-header {
+  color: #fdfcfc;
+  padding: 40px;
+  background: #333333;
+}
+.profile-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.profile-page .profile {
+  width: 500px;
+}
+.profile-page .profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
 }
 .navBG {
   position: absolute;
