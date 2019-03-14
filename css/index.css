@@ -158,7 +158,7 @@ q {
   font-size: 1.8rem;
 }
 strong {
-  font-weight: 400;
+  font-weight: 500;
 }
 @font-face {
   font-family: 'PT Sans';
@@ -215,6 +215,11 @@ strong {
 }
 .slide-out-bottom {
   animation: slide-out-bottom 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
+}
+@keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
 }
 .carousel {
   width: 100%;
@@ -416,6 +421,30 @@ strong {
   margin: 20px;
   width: 275px;
   height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-cont .reviews .review .words {
+  display: flex;
+  width: 276px;
+  height: 156px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+}
+.main-cont .reviews .review p {
+  font-size: 1.8rem;
+}
+.main-cont .reviews .review h3 {
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding: 5px;
+  margin-left: 30px;
+  margin-bottom: 0;
+  width: 150px;
 }
 .main-cont .reviews .male {
   background-image: url("../../Images/reviewCards/Male-Full-Card.png");
@@ -438,6 +467,15 @@ strong {
   color: #fdfcfc;
   padding: 40px;
   background: #333333;
+}
+.circle-chart {
+  height: 200px;
+  width: 200px;
+}
+.circle-chart-circle {
+  animation: circle-chart-fill 2s reverse;
+  transform: rotate(-90deg);
+  transform-origin: center;
 }
 .profile-page {
   display: flex;

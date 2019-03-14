@@ -43,6 +43,31 @@
       margin: 20px;
       width:275px;
       height:200px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between; 
+      .words {
+        display: flex;
+        width: 276px;
+        height:156px;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+      }
+      p {
+      font-size: 1.8rem;
+      }
+      h3 {
+        text-align: left;
+        font-size: 2.2rem;
+        font-weight: 700;
+        padding: 5px;
+        margin-left: 30px;
+        margin-bottom: 0;
+        width: 150px;
+      }
+      
     }
     .male {
       background-image: url("../../Images/reviewCards/Male-Full-Card.png");
@@ -70,6 +95,15 @@
   color: @h1BG;
   padding: 40px;
   background: @reviewHeaderBG;
+}
+.circle-chart {
+  height: 200px;
+  width: 200px;
+}
+.circle-chart-circle {
+  animation: circle-chart-fill 2s reverse;
+  transform: rotate(-90deg);
+  transform-origin: center;
 }
 
 .profile-page {
