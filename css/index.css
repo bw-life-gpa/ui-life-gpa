@@ -427,6 +427,10 @@ q {
 .panel {
   margin: 40px auto;
 }
+.panel .graphic {
+  widows: 300px;
+  height: 300px;
+}
 .review-header {
   color: #fdfcfc;
   padding: 40px;
@@ -437,6 +441,10 @@ q {
   flex-wrap: wrap;
   justify-content: center;
 }
+.profile-page .team-profile .graphic {
+  width: 300px;
+  height: 300px;
+}
 .profile-page .profile {
   width: 500px;
 }
@@ -445,9 +453,9 @@ q {
   height: 150px;
   border-radius: 75px;
 }
-.icon i {
-  width: 30px;
-  height: 30px;
+.icon .i {
+  width: 80px;
+  height: 80px;
 }
 .navBG {
   position: absolute;
