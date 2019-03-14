@@ -1,0 +1,89 @@
+
+
+.content {
+  width: 100%;
+  margin-top: 100px;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+.change {
+  display: block;
+}
+.landing {
+  padding: 10px;
+  padding-top: 30px;
+  position: relative;
+  z-index: 2;
+  background: @h1BG;
+}
+.main-cont {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 10px;
+  position: relative;
+  z-index: 3;
+  background: @h1BG;
+
+  .call-to-action {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+      margin: 10px;
+    }
+  }
+  .reviews {
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .review{
+      margin: 20px;
+      width:200px;
+      height:200px;
+    }
+  }
+  
+}
+.panel {
+  margin: 40px auto;
+}
+.review-header {
+  color: @h1BG;
+  padding: 40px;
+  background: @reviewHeaderBG;
+}
+.profile-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .profile {
+      width: 500px;
+      img{
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+      }
+    }
+}
+  
+
+.navBG {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  display: none;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../Images/DropDownCover.jpg");
+  opacity: 0.1;
+  background-position: center;
+  background-size: cover;
+}
+.dropdown-selected2 {
+  display: flex;
+}

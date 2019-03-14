@@ -1,254 +1,399 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title></title>
-    <link
-      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./css/index.css"
-      media="screen"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Rajdhani"
-      rel="stylesheet"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Life GPA</title>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css" media="screen" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.0/TweenMax.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Header/Nav -->
+    <div class="header">
+        <div class="dropdown">
+          <img
+            class="nav-btn"
+            src="./Images/Icons-Logos/TWalsh__menu2-512.png"
+            alt="navigation button"
+          />
+          <div class="links">
+            <button class="link" data-tab="1">Home</button>
+            <button class="link" data-tab="2">About</button>
+            <button class="link" data-tab="3">Contact</button>
+            <button class="link" href="#">Login</button>
+          </div>
+        </div>
+        <img
+          class="logo-icon"
+          src="./Images/Icons-Logos/LogoIcon.png"
+          alt="navigation button"
+        />
+        <img
+          class="logo-tm"
+          src="./Images/Icons-Logos/LogoTM.png"
+          alt="logo"
+        />
+    </div>
+    <!-- Body/Pages -->
+    <!-- Home Page -->
+    <div class="home content change" data-tab="1">
+        <!-- CAROUSEL COMPONENT -->
+        <div class="carousel">
+            <!-- Left Button -->
+            <div class="left-button"><i class="icon-chevron-sign-left"></i></div>
+            <!-- Slides -->
+            <div class="slide">
+                <img class="slide-image" src="./Images/phone/Home-Screen.png" />
+                <div class="splash-info">
+                    <h1>Life GPA</h1>
+                    <h2>A better Habit tracker</h2>
+                    <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    <p>(it's free)</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img class="slide-image" src="./Images/phone/Sign-Up-Screen.png" />
+                <div class="splash-info">
+                    <h1>Life GPA</h1>
+                    <h2>A better Habit tracker</h2>
+                    <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    <p>(it's free)</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img class="slide-image" src="./Images/phone/My-Habits-Screen.png" />
+                <div class="splash-info">
+                    <h1>Life GPA</h1>
+                    <h2>A better Habit tracker</h2>
+                    <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    <p>(it's free)</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img class="slide-image" src="./Images/phone/Daily-Report-Screen.png" />
+                <div class="splash-info">
+                    <h1>Life GPA</h1>
+                    <h2>A better Habit tracker</h2>
+                    <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    <p>(it's free)</p>
+                </div>
+            </div>
+            <!-- Right Button -->
+            <div class="right-button"><i class="icon-chevron-sign-right"></i></div>
+        </div>
+        <section class="landing">
+            <section class="main-cont">
+                <div class="panel">
+                    <h1>Smash Through Your Goals!</h1>
+                    <p>
+                    “Easily break bad habits like smoking, drinking or nail biting, or build positive habits like fitness, meditation or reading”
+                    </p>
+                </div>
+                <div class="panel review-header">
+                    <h2>Every Feature You’ve Ever Wanted</h2>
+                    <p>
+                    We listen to your feedback and integrate feature requests on a regular basis. Life GPA is not only built by us, but by the whole Life GPA community!
+                    </p>
+                </div>
+                <div class="reviews features">
+                    <div class="review feature">
+                      <q>
+                        <strong>Great Community.</strong>
+                        Talk to like-minded people on our specialized discussion forums and get motivated!
+                      </q>
+                    </div>
+                    <div class="review feature">
+                      <q>
+                        <strong>Get Reminded</strong>
+                        Our powerful and flexible reminders make it extremely easy to start a new habit!
+                      </q>
+                    </div>
+                    <div class="review feature">
+                      <q>
+                        <strong>Own Your Data</strong>
+                        Do you like fiddling with data and creating graphs? Easily export your data in CSV format!
+                      </q>
+                    </div>
+                    <div class="review feature">
+                      <q>
+                        <strong>Multiple Widgets</strong>
+                        Quickly input data from your homescreen using our Android widgets
+                      </q>
+                    </div>
+                    <div class="review feature">
+                        <q>
+                          <strong>Extremely Powerful</strong>
+                          Create any type of goal. Do 50 pushups every Monday and Friday? Check. Study Spanish for twenty minutes at least 3x per week? Check.
+                        </q>
+                      </div>
+                      <div class="review feature">
+                        <q>
+                          <strong>Graphs, Graphs, Graphs</strong>
+                          Check and explore your data using our in-depth analytics tools
+                        </q>
+                      </div>
+                      <div class="review feature">
+                        <q>
+                          <strong>Cloud Data</strong>
+                          All your data is safely stored in the cloud so you won’t ever lose it, even when you get a new phone
+                        </q>
+                      </div>
+                      <div class="review feature">
+                        <q>
+                          <strong>Multi-device Syncing</strong>
+                          Want to use Life GPA on your phone and tablet? No problem, you can sync between devices with the push of a button!
+                        </q>
+                      </div>
+                  </div>
+                <div class="panel review-header">
+                    <h2>We Love our Users, And They Love Us.</h2>
+                    <p>
+                    With over 0 downloads and counting, you cannot go wrong with Life GPA. Check out what our users are saying about us!
+                    </p>
+                </div>
+                <div class="reviews">
+                  <div class="review male">
+                    <q>
+                      <strong>Get it.</strong>
+                      Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                    </q>
+                  </div>
+                  <div class="review male">
+                    <q>
+                        <strong>Get it.</strong>
+                        Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                    </q>
+                  </div>
+                  <div class="review male">
+                    <q>
+                          <strong>Get it.</strong>
+                          Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                    </q>
+                  </div>
+                  <div class="review male">
+                    <q>
+                            <strong>Get it.</strong>
+                            Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                    </q>
+                  </div>
+                  <div class="review female">
+                      <q>
+                        <strong>Get it.</strong>
+                        Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                      </q>
+                  </div>
+                  <div class="review female">
+                    <q>
+                        <strong>Get it.</strong>
+                        Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                    </q>
+                  </div>
+                  <div class="review female">
+                    <q>
+                          <strong>Get it.</strong>
+                          Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                    </q>
+                  </div>
+                  <div class="review female">
+                    <q>
+                            <strong>Get it.</strong>
+                            Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                    </q>
+                  </div>
+                </div>
+                <div class="panel">
+                  <h2>Secondary Benefits</h2>
+                  <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                  iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
+                  doloremque laboriosam, eius tenetur minus sed quia commodi illum
+                  repudiandae eaque?
+                  </p>
+                  <div class="call-to-action">
+                    <img src="./Images/Icons-Logos/google-play-store.png" alt=" Andriod Download">
+                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                  </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    <!-- About Page -->
+    <div class="about content " data-tab="2">
+            <section class="landing">
+                <section class="main-cont">
+                  <div class="panel">
+                    <h1>Every Feature You’ve Ever Wanted</h1>
+                    <p>
+                      We listen to your feedback and integrate feature requests on a regular basis. Life GPA is not only built by us, but by the whole Life GPA community!
+                    </p>
+                  </div>
+                  <!-- Carousel For Walkthrough -->
+                  <div class="carousel">
+                      <!-- Left Button -->
+                      <div class="left-button"><i class="icon-chevron-sign-left"></i></div>
+                      <!-- Slides -->
+                      <div class="slide">
+                          <img class="slide-image" src="./Images/phone/Home-Screen.png" />
+                          <div class="splash-info">
+                              <h1>Life GPA</h1>
+                              <h2>A better Habit tracker</h2>
+                              <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                              <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                              <p>(it's free)</p>
+                          </div>
+                      </div>
+                      <div class="slide">
+                          <img class="slide-image" src="./Images/phone/Sign-Up-Screen.png" />
+                          <div class="splash-info">
+                              <h1>Life GPA</h1>
+                              <h2>A better Habit tracker</h2>
+                              <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                              <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                              <p>(it's free)</p>
+                          </div>
+                      </div>
+                      <div class="slide">
+                          <img class="slide-image" src="./Images/phone/My-Habits-Screen.png" />
+                          <div class="splash-info">
+                              <h1>Life GPA</h1>
+                              <h2>A better Habit tracker</h2>
+                              <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                              <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                              <p>(it's free)</p>
+                          </div>
+                      </div>
+                      <div class="slide">
+                          <img class="slide-image" src="./Images/phone/Daily-Report-Screen.png" />
+                          <div class="splash-info">
+                              <h1>Life GPA</h1>
+                              <h2>A better Habit tracker</h2>
+                              <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                              <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                              <p>(it's free)</p>
+                          </div>
+                      </div>
+                      <!-- Right Button -->
+                      <div class="right-button"><i class="icon-chevron-sign-right"></i></div>
+                  </div>
+                  <div class="panel">
+                    <h2>Change is Easier With Life GPA</h2>
+                    <p>
+                      We'll even walk you through the setup process. Select from a list of pre designed habits for a quick start, or begin making your own.
+                    </p>
+                  </div>
+                  <div class="panel">
+                    <h2>Feature</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Praesentium provident ex harum vel ullam, est aperiam saepe
+                      tempore cumque nam excepturi earum deleniti alias deserunt
+                      officia. Quod, veniam? Nobis, quasi?
+                    </p>
+                  </div>  
+                  <div class="panel">
+                    <h2>Benefit</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                      iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
+                      doloremque laboriosam, eius tenetur minus sed quia commodi illum
+                      repudiandae eaque?
+                    </p>
+                  </div>
+                </section>
+            </section>
+    </div>
+    <!-- Contact Page -->
+    <div class="contact content" data-tab="3">
+              <section class="landing">
+                <section class="main-cont">
+                  <div class="profile-page">
+                    <div class="team-profile">
+                      <h1>Meet The team</h1>
+                      <p>
+                      Build Week brings together a group of students and challenges them to build a product in one week. Everything from marketing and landing pages to the applicationa and backend system required to make it run.
+                    </div>
+                    <div class="profile">
+                      <h2>Project Lead</h2>
+                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Ryan Clausen">
+                      <h3>Ryan Clausen</h3>
+                      <p>
+                          Hey everybody, my name is Ryan and I am a fullstack developer. I am currently a full time student and part time teaching assistant at Lambda School. I also enjoy learning new technologies and building neat things on my own.
+                      </p>
+                    </div>
+                    <div class="profile">
+                      <h2>Back End</h2>
+                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Name Here">
+                      <h3>Name Here</h3>
+                      <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Praesentium provident ex harum vel ullam, est aperiam saepe
+                      tempore cumque nam excepturi earum deleniti alias deserunt
+                      officia. Quod, veniam? Nobis, quasi?
+                      </p>
+                    </div>
+                    <div class="profile">
+                      <h2>Front End</h2>
+                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Name Here">
+                      <h3>Name Here</h3>
+                      <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                      iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
+                      doloremque laboriosam, eius tenetur minus sed quia commodi illum
+                      repudiandae eaque?
+                      </p>
+                    </div>
+                    <div class="profile">
+                      <h2>Front End</h2>
+                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Name Here">
+                      <h3>Name Here</h3>
+                      <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                      iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
+                      doloremque laboriosam, eius tenetur minus sed quia commodi illum
+                      repudiandae eaque?
+                      </p>
+                    </div>
+                    <div class="profile">
+                      <h2>User Interface</h2>
+                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Ethan Baugher">
+                      <h3>Ethan Baugher</h3>
+                      <p>
+                          Ethan Baugher was born and raised in Columbus Indiana. Influenced by the architecture and many art exhibits, he enjoys the creative outlet that writing code offers. As a a father he spends most of his free time at afterschool events and other family activities. Ocasionaly, getting time for weekend fishing and camping trips.
+                      </p>
+                    </div>
+                  </div>
+              </section>
+            </section>
+    </div>
+    <!-- navBG -->
+    <div class="navBG"></div>
+    
+    <!-- Footer/Nav -->
+    <div class="footer">
+        <section class="contact">
+          <h2>Contact Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+            asperiores consequatur a molestiae quidem natus fuga, odio minima
+            ratione necessitatibus ab aut iusto quas perspiciatis voluptatum quasi
+            sit earum optio..
+          </p>
+          <button class="link" data-tab="3">Contact Us!</button>
+        </section>
+        <p>Copyright © bw-life-gpa</p>
+      </div>
+</body>
+<!-- JavaScript -->
     <script defer="defer" src="js/main.js"></script>
     <script defer="defer" src="js/dropdown.js"></script>
     <script defer="defer" src="js/carousel.js"></script>
-  </head>
-  <body>
-    <!-- Header/Nav -->
-    <div class="header">
-      <div class="dropdown">
-        <img
-          class="nav-btn"
-          src="./Components/images/TWalsh__menu2-512.png"
-          alt="navigation button"
-        />
-        <div class="links">
-          <button class="link" data-tab="1">Home</button>
-          <button class="link" data-tab="2">About</button>
-          <button class="link" data-tab="3">Contact</button>
-          <button class="link" href="#">Login</button>
-        </div>
-      </div>
-      <img
-        class="logo-icon"
-        src="./Components/images/1552407133711.png"
-        alt="navigation button"
-      />
-      <img
-        class="logo"
-        src="./Components/images/1552407177530.png"
-        alt="logo"
-      />
-    </div>
-    <div class="wrapper">
-
-      <!-- Home Page -->
-      <div class="home content" data-tab="1">
-        <section class="body">
-          <section class="landing">
-            <h1>Welcome Life GPA</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              enim, blanditiis neque recusandae magnam cum voluptatibus ipsam
-              odio sit dolorem laudantium, fugit praesentium sunt impedit
-              quibusdam dolores inventore ab animi!
-            </p>
-            <h2>Primary Benefits</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Cupiditate adipisci maxime voluptatibus dignissimos est deleniti
-              mollitia qui doloribus asperiores at rerum, dolore officia, animi
-              consequatur eum saepe illum enim aperiam!
-            </p>
-          </section>
-          <section class="main-cont">
-            <h2>Features</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium provident ex harum vel ullam, est aperiam saepe
-              tempore cumque nam excepturi earum deleniti alias deserunt
-              officia. Quod, veniam? Nobis, quasi?
-            </p>
-            <h2>Secondary Benefits</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-              iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
-              doloremque laboriosam, eius tenetur minus sed quia commodi illum
-              repudiandae eaque?
-            </p>
-          </section>
-        </section>
-      </div>
-      <!-- About Page -->
-      <div class="about content change" data-tab="2">
-        <section class="body">
-          <section class="landing">
-            <h1>About LQ</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              enim, blanditiis neque recusandae magnam cum voluptatibus ipsam
-              odio sit dolorem laudantium, fugit praesentium sunt impedit
-              quibusdam dolores inventore ab animi!
-            </p>
-          </section>
-          <section class="carousel-wrapper">
-            <div data-carousel="blah" class="Carousel">
-                  <div class="Carousel-Slide clearfix">
-                      <div class="Carousel-Slide-item">
-                        <div class="Carousel-Slide-Content">
-                          <img class="Carousel-Slide-image" src="./Components/images/Login page.png"></img>
-                          <div class="Carousel-Slide-info">
-                            <h3>Getting Started</h3>
-                            <p>It's easier than you think!</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="Carousel-Slide-item">
-                        <div class="Carousel-Slide-Content">
-                            <img class="Carousel-Slide-image" src="./Components/images/Login page.png"></img>
-                            <div class="Carousel-Slide-info">
-                              <h3>Getting Started</h3>
-                              <p>It's easier than you think!</p>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="Carousel-Slide-item">
-                        <div class="Carousel-Slide-Content">
-                              <img class="Carousel-Slide-image" src="./Components/images/Login page.png"></img>
-                              <div class="Carousel-Slide-info">
-                                <h3>Getting Started</h3>
-                                <p>It's easier than you think!</p>
-                              </div>
-                        </div>
-                      </div>
-                      <div class="Carousel-Slide-item">
-                        <div class="Carousel-Slide-Content">
-                                <img class="Carousel-Slide-image" src="./Components/images/Login page.png"></img>
-                                <div class="Carousel-Slide-info">
-                                  <h3>Getting Started</h3>
-                                  <p>It's easier than you think!</p>
-                                </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="Carousel-Controller">
-                      <div class="Carousel-Controller-Nav">
-                          <div class="Carousel-Controller-Nav-left">
-                              <i class="icon-chevron-sign-left"></i>
-                          </div>
-                          <div class="Carousel-Controller-Nav-right">
-                              <i class="icon-chevron-sign-right"></i>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div id="completed">completed</div>
-          </section>
-          <section class="main-cont">
-            <h2>Walkthrough</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Cupiditate adipisci maxime voluptatibus dignissimos est deleniti
-              mollitia qui doloribus asperiores at rerum, dolore officia, animi
-              consequatur eum saepe illum enim aperiam!
-            </p>
-            <h2>Feature</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium provident ex harum vel ullam, est aperiam saepe
-              tempore cumque nam excepturi earum deleniti alias deserunt
-              officia. Quod, veniam? Nobis, quasi?
-            </p>
-            <h2>Benefit</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-              iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
-              doloremque laboriosam, eius tenetur minus sed quia commodi illum
-              repudiandae eaque?
-            </p>
-          </section>
-        </section>
-      </div>
-      <!-- Contact Page -->
-      <div class="contact content" data-tab="3">
-        <section class="body">
-          <section class="landing">
-            <h1>The team</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              enim, blanditiis neque recusandae magnam cum voluptatibus ipsam
-              odio sit dolorem laudantium, fugit praesentium sunt impedit
-              quibusdam dolores inventore ab animi!
-            </p>
-          </section>
-          <section class="main-cont">
-            <h2>Project Lead</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Cupiditate adipisci maxime voluptatibus dignissimos est deleniti
-              mollitia qui doloribus asperiores at rerum, dolore officia, animi
-              consequatur eum saepe illum enim aperiam!
-            </p>
-            <h2>Back End</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium provident ex harum vel ullam, est aperiam saepe
-              tempore cumque nam excepturi earum deleniti alias deserunt
-              officia. Quod, veniam? Nobis, quasi?
-            </p>
-            <h2>Front End 1</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-              iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
-              doloremque laboriosam, eius tenetur minus sed quia commodi illum
-              repudiandae eaque?
-            </p>
-            <h2>Front End 2</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-              iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
-              doloremque laboriosam, eius tenetur minus sed quia commodi illum
-              repudiandae eaque?
-            </p>
-            <h2>User Interface</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-              iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
-              doloremque laboriosam, eius tenetur minus sed quia commodi illum
-              repudiandae eaque?
-            </p>
-          </section>
-        </section>
-      </div>
-      <!-- navBG -->
-      <div class="navBG"></div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-      <section class="contact">
-        <h2>Contact Us</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-          asperiores consequatur a molestiae quidem natus fuga, odio minima
-          ratione necessitatibus ab aut iusto quas perspiciatis voluptatum quasi
-          sit earum optio..
-        </p>
-        <button class="link" data-tab="3">Contact Us!</button>
-      </section>
-      <p>Copyright © bw-life-gpa</p>
-    </div>
-  </body>
+    <!-- <script async="async" src="js/landing.js"></script> -->
 </html>
