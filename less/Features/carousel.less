@@ -7,6 +7,9 @@
   background-image: url("../../Images/black-and-yellow-wallpaper-11-background.jpg");
   background-position: center;
   background-size: cover;
+  @media (max-width: 800px) {
+    height: 400px;
+  }
   .left-button,
   .right-button {
     .flex(center);
@@ -31,10 +34,13 @@
     transform: translate(0, -50%);
   }
   .slide{
-    width: 50%;
+    width: 60%;
     height: 100%;
     margin: 0 40px;
     display: none;
+    @media (max-width: 1200px) {
+      width: 80%;
+    }
     
     .slide-image{
       width: 300px;
@@ -43,27 +49,41 @@
       opacity: 0;
       position: relative;
       bottom: -10px;
+      @media (max-width: 800px) {
+        width: 250px;
+      }
     }
 
     .splash-info{
-      margin: 10px auto;
+      margin: 30px auto;
       height: 284px;
       display: flex;
       flex-wrap: wrap;
       align-content: center;
       width:300px;
       justify-content: center;
+      @media (max-width: 800px) {
+        width: 175px;
+        flex-direction: column;
+      }
     
       h1 {
         background:none;
         font-weight: 800;
         color: @companyYellow;
       }
+      h3 {
+        color: @companyYellow;
+      }
       h2,p {
+        margin: 10px 0;
         color: @h1BG;
       }
       img {
         margin:10px;
+        @media (max-width: 800px) {
+          width: 50%;
+        }
       }
     }
     

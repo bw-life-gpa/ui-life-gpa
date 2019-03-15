@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css" media="screen" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.0/TweenMax.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -24,7 +26,7 @@
             <button class="link" data-tab="1">Home</button>
             <button class="link" data-tab="2">About</button>
             <button class="link" data-tab="3">Contact</button>
-            <button class="link" href="#">Login</button>
+            <button class="link" data-tab="4" href="https://lifegpa.netlify.com/login">Login</button>
           </div>
         </div>
         <img
@@ -59,11 +61,13 @@
             <div class="slide">
                 <img class="slide-image" src="./Images/phone/Sign-Up-Screen.png" />
                 <div class="splash-info">
-                    <h1>Life GPA</h1>
-                    <h2>A better Habit tracker</h2>
-                    <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
-                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
-                    <p>(it's free)</p>
+                    <h2>Motivation at your finger tips!</h2>
+                    <h3>Get it on Android or Apple market place.</h3>
+                    <div style="display: flex;">
+                      <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                      <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    </div>
+                    <p>(did we mention...it's free)</p>
                 </div>
             </div>
             <div class="slide">
@@ -97,6 +101,7 @@
                     “Easily break bad habits like smoking, drinking or nail biting, or build positive habits like fitness, meditation or reading”
                     </p>
                 </div>
+                <img src="./circle.svg" alt="live circle">
                 <div class="panel review-header">
                     <h2>Every Feature You’ve Ever Wanted</h2>
                     <p>
@@ -105,53 +110,61 @@
                 </div>
                 <div class="reviews features">
                     <div class="review feature">
+                        <div class="icon"><img class="i" src="./Images/graphics/undraw_problem_solving_ft81.png" alt=""></div>
                       <q>
                         <strong>Great Community.</strong>
                         Talk to like-minded people on our specialized discussion forums and get motivated!
                       </q>
                     </div>
                     <div class="review feature">
+                        <div class="icon"><img class="i" src="./Images/graphics/undraw_problem_solving_ft81.png" alt=""></div>
                       <q>
                         <strong>Get Reminded</strong>
                         Our powerful and flexible reminders make it extremely easy to start a new habit!
                       </q>
                     </div>
                     <div class="review feature">
+                        <div class="icon"><img class="i" src="./Images/graphics/undraw_problem_solving_ft81.png" alt=""></div>
                       <q>
                         <strong>Own Your Data</strong>
                         Do you like fiddling with data and creating graphs? Easily export your data in CSV format!
                       </q>
                     </div>
                     <div class="review feature">
+                        <div class="icon"><img class="i" src="./Images/graphics/undraw_problem_solving_ft81.png" alt=""></div>
                       <q>
                         <strong>Multiple Widgets</strong>
                         Quickly input data from your homescreen using our Android widgets
                       </q>
                     </div>
                     <div class="review feature">
+                        <div class="icon"><img class="i" src="./Images/graphics/undraw_problem_solving_ft81.png" alt=""></div>
                         <q>
                           <strong>Extremely Powerful</strong>
                           Create any type of goal. Do 50 pushups every Monday and Friday? Check. Study Spanish for twenty minutes at least 3x per week? Check.
                         </q>
-                      </div>
-                      <div class="review feature">
-                        <q>
-                          <strong>Graphs, Graphs, Graphs</strong>
-                          Check and explore your data using our in-depth analytics tools
-                        </q>
-                      </div>
-                      <div class="review feature">
-                        <q>
-                          <strong>Cloud Data</strong>
-                          All your data is safely stored in the cloud so you won’t ever lose it, even when you get a new phone
-                        </q>
-                      </div>
-                      <div class="review feature">
-                        <q>
-                          <strong>Multi-device Syncing</strong>
-                          Want to use Life GPA on your phone and tablet? No problem, you can sync between devices with the push of a button!
-                        </q>
-                      </div>
+                    </div>
+                    <div class="review feature">
+                        <div class="icon"><img class="i" src="./Images/graphics/undraw_problem_solving_ft81.png" alt=""></div>
+                      <q>
+                        <strong>Graphs, Graphs, Graphs</strong>
+                        Check and explore your data using our in-depth analytics tools
+                      </q>
+                    </div>
+                    <div class="review feature">
+                        <div class="icon"><img class="i" src="./Images/graphics/undraw_problem_solving_ft81.png" alt=""></div>
+                      <q>
+                        <strong>Cloud Data</strong>
+                        All your data is safely stored in the cloud so you won’t ever lose it, even when you get a new phone
+                      </q>
+                    </div>
+                    <div class="review feature">
+                        <div class="icon"><img class="i" src="./Images/graphics/undraw_problem_solving_ft81.png" alt=""></div>
+                      <q>
+                        <strong>Multi-device Syncing</strong>
+                        Want to use Life GPA on your phone and tablet? No problem, you can sync between devices with the push of a button!
+                      </q>
+                    </div>
                   </div>
                 <div class="panel review-header">
                     <h2>We Love our Users, And They Love Us.</h2>
@@ -161,52 +174,68 @@
                 </div>
                 <div class="reviews">
                   <div class="review male">
-                    <q>
-                      <strong>Get it.</strong>
-                      Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
-                    </q>
+                    <div class="words">
+                      <p><strong style="font-weight: 700">Get it.</strong>
+                        Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
+                      </p> 
+                    </div>
+                    <h3>Daniel</h3>
+                  </div>
+                  <div class="review female">
+                      <div class="words">
+                          <p><strong style="font-weight: 700">Get it.</strong>
+                            Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take controlveling up yourself.
+                          </p> 
+                      </div>
+                      <h3>Daniel</h3>
                   </div>
                   <div class="review male">
-                    <q>
-                        <strong>Get it.</strong>
-                        Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
-                    </q>
+                      <div class="words">
+                          <p><strong style="font-weight: 700">Love it!</strong>
+                            I love this app. I just love it, love it, love it. It tracks your habits, and makes you just a better person. You know. I just love it. If you don't have this app yet well, bless your heart.
+                          </p> 
+                        </div>
+                        <h3>Carol</h3>
+                  </div>
+                  <div class="review female">
+                      <div class="words">
+                          <p><strong style="font-weight: 700">Finaly!</strong>
+                            I've been looking for an app that could replace my wife and boy did I find it! finaly something that will judge me fairly and give honest feedback and not just tell me I should find a job. smh Netflix ain't gonna bing itself.
+                          </p> 
+                        </div>
+                        <h3>Sam</h3>
                   </div>
                   <div class="review male">
-                    <q>
-                          <strong>Get it.</strong>
-                          Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
-                    </q>
+                      <div class="words">
+                          <p><strong style="font-weight: 700">Hands Down best app!</strong>
+                            I know I shouldn't have favorite project's but if I did it would be this one. definitly the best one I've ever seen, and I've seen like 3. The only thing I would add... more bongo cat memes.
+                          </p> 
+                        </div>
+                        <h3>Ben Tsao</h3>
+                  </div>
+                  <div class="review female">
+                      <div class="words">
+                          <p><strong style="font-weight: 700">Simply wonderful!</strong>
+                            This app lets me organize and track any aspect of my life that I want. Great for fitness, quitting smoking, staying positive, getting 8 hours of sleep, etc. I recommend this to everyone!
+                          </p> 
+                        </div>
+                        <h3>Susan</h3>
                   </div>
                   <div class="review male">
-                    <q>
-                            <strong>Get it.</strong>
-                            Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
-                    </q>
+                      <div class="words">
+                          <p><strong style="font-weight: 700">Helped me more than any other app!</strong>
+                            Clean design, motivating and very flexible in tracking your different habits. This is the first app that got me to actually not just give up, and the daily changing reminders are a nice touch.
+                          </p> 
+                        </div>
+                        <h3>Thomas</h3>
                   </div>
                   <div class="review female">
-                      <q>
-                        <strong>Get it.</strong>
-                        Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
-                      </q>
-                  </div>
-                  <div class="review female">
-                    <q>
-                        <strong>Get it.</strong>
-                        Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
-                    </q>
-                  </div>
-                  <div class="review female">
-                    <q>
-                          <strong>Get it.</strong>
-                          Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
-                    </q>
-                  </div>
-                  <div class="review female">
-                    <q>
-                            <strong>Get it.</strong>
-                            Best tracker I’ve had the pleasure of using. Clean UI, excellent features, and very helpful. Take control of your life. Stop leveling up that character from that other app and start leveling up yourself.
-                    </q>
+                      <div class="words">
+                          <p><strong style="font-weight: 700">Easiest app I've used.</strong>
+                            I was able to get started with creating habits from their templates realy quickly. Customizing it was simple and felt like t knew what I was trying to accomplish. I love it!
+                          </p> 
+                        </div>
+                        <h3>Sarah</h3>
                   </div>
                 </div>
                 <div class="panel">
@@ -218,15 +247,15 @@
                   repudiandae eaque?
                   </p>
                   <div class="call-to-action">
-                    <img src="./Images/Icons-Logos/google-play-store.png" alt=" Andriod Download">
-                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    <img href="https://lifegpa.netlify.com/login" src="./Images/Icons-Logos/google-play-store.png" alt=" Andriod Download">
+                    <img href="https://lifegpa.netlify.com/login" src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
                   </div>
                 </div>
             </section>
         </section>
     </div>
     <!-- About Page -->
-    <div class="about content " data-tab="2">
+    <div class="about content" data-tab="2">
             <section class="landing">
                 <section class="main-cont">
                   <div class="panel">
@@ -234,6 +263,7 @@
                     <p>
                       We listen to your feedback and integrate feature requests on a regular basis. Life GPA is not only built by us, but by the whole Life GPA community!
                     </p>
+                    <img class="graphic" src="./Images/graphics/undraw_problem_solving_ft81.png" alt="">
                   </div>
                   <!-- Carousel For Walkthrough -->
                   <div class="carousel">
@@ -288,6 +318,7 @@
                     <p>
                       We'll even walk you through the setup process. Select from a list of pre designed habits for a quick start, or begin making your own.
                     </p>
+                    <img class="graphic" src="./Images/graphics/undraw_problem_solving_ft81.png" alt="">
                   </div>
                   <div class="panel">
                     <h2>Feature</h2>
@@ -297,6 +328,7 @@
                       tempore cumque nam excepturi earum deleniti alias deserunt
                       officia. Quod, veniam? Nobis, quasi?
                     </p>
+                    <img class="graphic" src="./Images/graphics/undraw_problem_solving_ft81.png" alt="">
                   </div>  
                   <div class="panel">
                     <h2>Benefit</h2>
@@ -307,6 +339,10 @@
                       repudiandae eaque?
                     </p>
                   </div>
+                  <div class="call-to-action">
+                      <img href="https://lifegpa.netlify.com/login" src="./Images/Icons-Logos/google-play-store.png" alt=" Andriod Download">
+                      <img href="https://lifegpa.netlify.com/login" src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    </div>
                 </section>
             </section>
     </div>
@@ -318,7 +354,8 @@
                     <div class="team-profile">
                       <h1>Meet The team</h1>
                       <p>
-                      Build Week brings together a group of students and challenges them to build a product in one week. Everything from marketing and landing pages to the applicationa and backend system required to make it run.
+                      Build Week brings together a group of students and challenges them to build a product in one week. Everything from marketing and landing pages to the applicationa and backend system required to make it run.</p>
+                      <img class="graphic" src="./Images/graphics/undraw_profile_6l1l.png" alt="">
                     </div>
                     <div class="profile">
                       <h2>Project Lead</h2>
@@ -330,19 +367,16 @@
                     </div>
                     <div class="profile">
                       <h2>Back End</h2>
-                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Name Here">
-                      <h3>Name Here</h3>
+                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Elisha Atulomah">
+                      <h3>Elisha Atulomah</h3>
                       <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Praesentium provident ex harum vel ullam, est aperiam saepe
-                      tempore cumque nam excepturi earum deleniti alias deserunt
-                      officia. Quod, veniam? Nobis, quasi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repellendus laboriosam ullam debitis dolores inventore assumenda rem quia nam, unde corrupti. Quia fugit enim quod possimus corporis adipisci! Quidem, eaque.
                       </p>
                     </div>
                     <div class="profile">
                       <h2>Front End</h2>
-                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Name Here">
-                      <h3>Name Here</h3>
+                      <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Brooks Vinyard">
+                      <h3>Brooks Vinyard</h3>
                       <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
                       iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
@@ -353,12 +387,9 @@
                     <div class="profile">
                       <h2>Front End</h2>
                       <img src="./Images/Icons-Logos/contact-placeholder.jpg" alt="Name Here">
-                      <h3>Name Here</h3>
+                      <h3>Arshak Asriyan</h3>
                       <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-                      iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
-                      doloremque laboriosam, eius tenetur minus sed quia commodi illum
-                      repudiandae eaque?
+                        Arshak has lived in Cleveland, Ohio for most of his life. He enjoys programming and long walks on the beach. Arshak spends most of his free time reading and hanging out with friends. However, most of his free time has been overtaken by the Lambda School grind!
                       </p>
                     </div>
                     <div class="profile">
@@ -373,6 +404,14 @@
               </section>
             </section>
     </div>
+    <!-- Login Page -->
+    <div class="login content" data-tab="4">
+        <section class="landing">
+          <section class="main-cont">
+            
+        </section>
+      </section>
+</div>
     <!-- navBG -->
     <div class="navBG"></div>
     

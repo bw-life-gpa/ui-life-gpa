@@ -157,6 +157,9 @@ q {
   margin: 0.5rem;
   font-size: 1.8rem;
 }
+strong {
+  font-weight: 500;
+}
 @font-face {
   font-family: 'PT Sans';
   font-style: italic;
@@ -213,6 +216,11 @@ q {
 .slide-out-bottom {
   animation: slide-out-bottom 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
 }
+@keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
+}
 .carousel {
   width: 100%;
   display: flex;
@@ -225,6 +233,11 @@ q {
   background-image: url("../../Images/black-and-yellow-wallpaper-11-background.jpg");
   background-position: center;
   background-size: cover;
+}
+@media (max-width: 800px) {
+  .carousel {
+    height: 400px;
+  }
 }
 .carousel .left-button,
 .carousel .right-button {
@@ -253,10 +266,15 @@ q {
   transform: translate(0, -50%);
 }
 .carousel .slide {
-  width: 50%;
+  width: 60%;
   height: 100%;
   margin: 0 40px;
   display: none;
+}
+@media (max-width: 1200px) {
+  .carousel .slide {
+    width: 80%;
+  }
 }
 .carousel .slide .slide-image {
   width: 300px;
@@ -266,8 +284,13 @@ q {
   position: relative;
   bottom: -10px;
 }
+@media (max-width: 800px) {
+  .carousel .slide .slide-image {
+    width: 250px;
+  }
+}
 .carousel .slide .splash-info {
-  margin: 10px auto;
+  margin: 30px auto;
   height: 284px;
   display: flex;
   flex-wrap: wrap;
@@ -275,17 +298,32 @@ q {
   width: 300px;
   justify-content: center;
 }
+@media (max-width: 800px) {
+  .carousel .slide .splash-info {
+    width: 175px;
+    flex-direction: column;
+  }
+}
 .carousel .slide .splash-info h1 {
   background: none;
   font-weight: 800;
   color: #FFEB38;
 }
+.carousel .slide .splash-info h3 {
+  color: #FFEB38;
+}
 .carousel .slide .splash-info h2,
 .carousel .slide .splash-info p {
+  margin: 10px 0;
   color: #fdfcfc;
 }
 .carousel .slide .splash-info img {
   margin: 10px;
+}
+@media (max-width: 800px) {
+  .carousel .slide .splash-info img {
+    width: 50%;
+  }
 }
 .dropdown {
   z-index: 2;
@@ -411,21 +449,72 @@ q {
 }
 .main-cont .reviews .review {
   margin: 20px;
-  width: 200px;
+  width: 275px;
   height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-cont .reviews .review .words {
+  display: flex;
+  width: 276px;
+  height: 156px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+}
+.main-cont .reviews .review p {
+  font-size: 1.8rem;
+}
+.main-cont .reviews .review h3 {
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding: 5px;
+  margin-left: 30px;
+  margin-bottom: 0;
+  width: 150px;
+}
+.main-cont .reviews .male {
+  background-image: url("../../Images/reviewCards/Male-Full-Card.png");
+  background-position: center;
+  background-size: cover;
+}
+.main-cont .reviews .female {
+  background-image: url("../../Images/reviewCards/Female-Full-Card.png");
+  background-position: center;
+  background-size: cover;
 }
 .panel {
   margin: 40px auto;
+}
+.panel .graphic {
+  widows: 300px;
+  height: 300px;
 }
 .review-header {
   color: #fdfcfc;
   padding: 40px;
   background: #333333;
 }
+.circle-chart {
+  height: 200px;
+  width: 200px;
+}
+.circle-chart-circle {
+  animation: circle-chart-fill 2s reverse;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
 .profile-page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.profile-page .team-profile .graphic {
+  width: 300px;
+  height: 300px;
 }
 .profile-page .profile {
   width: 500px;
@@ -434,6 +523,10 @@ q {
   width: 150px;
   height: 150px;
   border-radius: 75px;
+}
+.icon .i {
+  width: 80px;
+  height: 80px;
 }
 .navBG {
   position: absolute;
