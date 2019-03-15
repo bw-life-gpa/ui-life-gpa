@@ -26,7 +26,7 @@
             <button class="link" data-tab="1">Home</button>
             <button class="link" data-tab="2">About</button>
             <button class="link" data-tab="3">Contact</button>
-            <button class="link" data-tab="4" href="https://lifegpa.netlify.com/login">Login</button>
+            <button class="link" href="https://lifegpa.netlify.com/login">Login</button>
           </div>
         </div>
         <img
@@ -46,15 +46,17 @@
         <!-- CAROUSEL COMPONENT -->
         <div class="carousel">
             <!-- Left Button -->
-            <div class="left-button"><i class="icon-chevron-sign-left"></i></div>
+            <div class="left-button" style="display:none"><i class="icon-chevron-sign-left"></i></div>
             <!-- Slides -->
             <div class="slide">
                 <img class="slide-image" src="./Images/phone/Home-Screen.png" />
                 <div class="splash-info">
-                    <h1>Life GPA</h1>
+                    <h1 class="sld4">Life GPA</h1>
                     <h2>A better Habit tracker</h2>
-                    <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
-                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    <div style="display: flex;">
+                      <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                      <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                    </div>
                     <p>(it's free)</p>
                 </div>
             </div>
@@ -62,36 +64,16 @@
                 <img class="slide-image" src="./Images/phone/Sign-Up-Screen.png" />
                 <div class="splash-info">
                     <h2>Motivation at your finger tips!</h2>
-                    <h3>Get it on Android or Apple market place.</h3>
+                    <h3 class="sld4">Get it on Android or Apple market place.</h3>
                     <div style="display: flex;">
                       <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
                       <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
                     </div>
-                    <p>(did we mention...it's free)</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img class="slide-image" src="./Images/phone/My-Habits-Screen.png" />
-                <div class="splash-info">
-                    <h1>Life GPA</h1>
-                    <h2>A better Habit tracker</h2>
-                    <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
-                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
-                    <p>(it's free)</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img class="slide-image" src="./Images/phone/Daily-Report-Screen.png" />
-                <div class="splash-info">
-                    <h1>Life GPA</h1>
-                    <h2>A better Habit tracker</h2>
-                    <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
-                    <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
-                    <p>(it's free)</p>
+                    <p class="sld3">(did we mention...it's free)</p>
                 </div>
             </div>
             <!-- Right Button -->
-            <div class="right-button"><i class="icon-chevron-sign-right"></i></div>
+            <div id="home-right" class="right-button" style="display:none"><i class="icon-chevron-sign-right"></i></div>
         </div>
         <section class="landing">
             <section class="main-cont">
@@ -101,7 +83,9 @@
                     “Easily break bad habits like smoking, drinking or nail biting, or build positive habits like fitness, meditation or reading”
                     </p>
                 </div>
-                <img src="./circle.svg" alt="live circle">
+                <!-- svg -->
+                <svg width="100%" height="100%" class="circle-chart" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg"><circle class="circle-chart-background" stroke="#efefef" stroke-width="3" fill="none" cx="21" cy="21" r="15.91549431"></circle><circle class="circle-chart-circle" stroke="#ffec26" stroke-width="3" stroke-dasharray="75,100" stroke-linecap="round" fill="none" cx="21" cy="21" r="15.91549431"></circle><g class="gpa-text"><text x="50%" y="50%" class="chart-label">LifeGPA</text><text x="50%" y="50%" class="chart-number">75%</text></g></svg>
+                
                 <div class="panel review-header">
                     <h2>Every Feature You’ve Ever Wanted</h2>
                     <p>
@@ -256,95 +240,106 @@
     </div>
     <!-- About Page -->
     <div class="about content" data-tab="2">
-            <section class="landing">
-                <section class="main-cont">
-                  <div class="panel">
-                    <h1>Every Feature You’ve Ever Wanted</h1>
-                    <p>
-                      We listen to your feedback and integrate feature requests on a regular basis. Life GPA is not only built by us, but by the whole Life GPA community!
-                    </p>
-                    <img class="graphic" src="./Images/graphics/undraw_problem_solving_ft81.png" alt="">
+      <section class="landing">
+        <section class="main-cont">
+          <div class="panel">
+            <h1>Every Feature You’ve Ever Wanted</h1>
+            <p>
+              We listen to your feedback and integrate feature requests on a regular basis. Life GPA is not only built by us, but by the whole Life GPA community!
+            </p>
+            <img class="graphic" src="./Images/graphics/undraw_dark_analytics_7axy.svg" alt="">
+          </div>
+          <!-- Carousel For Walkthrough -->
+          <div id="abt-crsl" class="carousel">
+              <!-- Left Button -->
+              <div class="left-button"><i class="icon-chevron-sign-left"></i></div>
+              <!-- Slides -->
+              <div class="slide">
+                  <img class="slide-image" src="./Images/phone/Home-Screen.png" />
+                  <div class="splash-info">
+                      <h2>Starting is easy</h2>
+                      <h3>Just click the Create Acount</h3>
+                      <p>(or login if you already have an account)</p>
                   </div>
-                  <!-- Carousel For Walkthrough -->
-                  <div class="carousel">
-                      <!-- Left Button -->
-                      <div class="left-button"><i class="icon-chevron-sign-left"></i></div>
-                      <!-- Slides -->
-                      <div class="slide">
-                          <img class="slide-image" src="./Images/phone/Home-Screen.png" />
-                          <div class="splash-info">
-                              <h1>Life GPA</h1>
-                              <h2>A better Habit tracker</h2>
-                              <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
-                              <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
-                              <p>(it's free)</p>
-                          </div>
-                      </div>
-                      <div class="slide">
-                          <img class="slide-image" src="./Images/phone/Sign-Up-Screen.png" />
-                          <div class="splash-info">
-                              <h1>Life GPA</h1>
-                              <h2>A better Habit tracker</h2>
-                              <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
-                              <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
-                              <p>(it's free)</p>
-                          </div>
-                      </div>
-                      <div class="slide">
-                          <img class="slide-image" src="./Images/phone/My-Habits-Screen.png" />
-                          <div class="splash-info">
-                              <h1>Life GPA</h1>
-                              <h2>A better Habit tracker</h2>
-                              <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
-                              <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
-                              <p>(it's free)</p>
-                          </div>
-                      </div>
-                      <div class="slide">
-                          <img class="slide-image" src="./Images/phone/Daily-Report-Screen.png" />
-                          <div class="splash-info">
-                              <h1>Life GPA</h1>
-                              <h2>A better Habit tracker</h2>
-                              <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
-                              <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
-                              <p>(it's free)</p>
-                          </div>
-                      </div>
-                      <!-- Right Button -->
-                      <div class="right-button"><i class="icon-chevron-sign-right"></i></div>
+              </div>
+              <div class="slide">
+                  <img class="slide-image" src="./Images/phone/Sign-Up-Screen.png" />
+                  <div class="splash-info">
+                      <h2>Choose how to set up your info</h2>
+                      <h3>Use Social or email</h3>
                   </div>
-                  <div class="panel">
-                    <h2>Change is Easier With Life GPA</h2>
-                    <p>
-                      We'll even walk you through the setup process. Select from a list of pre designed habits for a quick start, or begin making your own.
-                    </p>
-                    <img class="graphic" src="./Images/graphics/undraw_problem_solving_ft81.png" alt="">
+              </div>
+              <div class="slide">
+                  <img class="slide-image" src="./Images/phone/My-Habits-Screen.png" />
+                  <div class="splash-info">
+                      <h2 class="sld3">Your habits are easily veiwable from the dashboard</h2>
+                      <h3>But you still need to create your own</h3>
+                      <p>(click the purple icon in the bottom right)</p>
                   </div>
-                  <div class="panel">
-                    <h2>Feature</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Praesentium provident ex harum vel ullam, est aperiam saepe
-                      tempore cumque nam excepturi earum deleniti alias deserunt
-                      officia. Quod, veniam? Nobis, quasi?
-                    </p>
-                    <img class="graphic" src="./Images/graphics/undraw_problem_solving_ft81.png" alt="">
-                  </div>  
-                  <div class="panel">
-                    <h2>Benefit</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-                      iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
-                      doloremque laboriosam, eius tenetur minus sed quia commodi illum
-                      repudiandae eaque?
-                    </p>
+              </div>
+              <div class="slide">
+                  <img class="slide-image" src="./Images/phone/Daily-Report-Screen.png" />
+                  <div class="splash-info">
+                      <h2>Mark habits as completed</h2>
+                      <h3>or not, we wont judge</h3>
+                      <p>(but the app will)</p>
                   </div>
-                  <div class="call-to-action">
-                      <img href="https://lifegpa.netlify.com/login" src="./Images/Icons-Logos/google-play-store.png" alt=" Andriod Download">
-                      <img href="https://lifegpa.netlify.com/login" src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
-                    </div>
-                </section>
-            </section>
+              </div>
+              <div class="slide">
+                  <img class="slide-image" src="./Images/phone/Specifications-Screen.png" />
+                  <div class="splash-info">
+                      <h2>Uh Oh!</h2>
+                      <h3>Looks like there's some work to do</h3>
+                      <p>(That's why we're here to help)</p>
+                  </div>
+              </div>
+              <div class="slide">
+                  <img class="slide-image" src="./Images/phone/Progress-Screen.png" />
+                  <div class="splash-info">
+                      <h2>Well look at that!</h2>
+                      <h3>you're almost there. All that's left is to get the App!</h3>
+                      <div style="display: flex;">
+                        <img src="./Images/Icons-Logos/google-play-store.png" alt="Android Downlod">
+                        <img src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+                      </div>
+                      <p>(That's why we're here to help)</p>
+                  </div>
+              </div>
+              <!-- Right Button -->
+              <div class="right-button"><i class="icon-chevron-sign-right"></i></div>
+          </div>
+          <div class="panel">
+            <h2>Change is Easier With Life GPA</h2>
+            <p>
+              We'll even walk you through the setup process. Select from a list of pre designed habits for a quick start, or begin making your own.
+            </p>
+            <img class="graphic" src="./Images/graphics/undraw_task_31wc.png" alt="">
+          </div>
+          <div class="panel">
+            <h2>Feature</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium provident ex harum vel ullam, est aperiam saepe
+              tempore cumque nam excepturi earum deleniti alias deserunt
+              officia. Quod, veniam? Nobis, quasi?
+            </p>
+            <img class="graphic" src="./Images/graphics/undraw_schedule_pnbk.svg" alt="">
+          </div>  
+          <div class="panel">
+            <h2>Benefit</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+              iusto amet autem ipsa eveniet harum dolorum, sequi ab rerum
+              doloremque laboriosam, eius tenetur minus sed quia commodi illum
+              repudiandae eaque?
+            </p>
+          </div>
+          <div class="call-to-action">
+              <img href="https://lifegpa.netlify.com/login" src="./Images/Icons-Logos/google-play-store.png" alt=" Andriod Download">
+              <img href="https://lifegpa.netlify.com/login" src="./Images/Icons-Logos/apple-app-store.png" alt="Apple Store Download">
+          </div>
+        </section>
+      </section>
     </div>
     <!-- Contact Page -->
     <div class="contact content" data-tab="3">

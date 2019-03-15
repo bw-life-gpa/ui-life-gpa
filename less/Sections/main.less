@@ -96,6 +96,7 @@
   padding: 40px;
   background: @reviewHeaderBG;
 }
+
 .circle-chart {
   height: 200px;
   width: 200px;
@@ -104,6 +105,32 @@
   animation: circle-chart-fill 2s reverse;
   transform: rotate(-90deg);
   transform-origin: center;
+}
+.gpa-text {
+  fill: #000;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
+}
+.chart-number {
+  font-size: 0.6em;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em);
+}
+
+.chart-label {
+  font-size: 0.2em;
+  /* text-transform: uppercase; */
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em);
 }
 
 .profile-page {
@@ -117,8 +144,11 @@
       }
     }
     .profile {
+      margin: 10px;
+      padding: 10px;
       width: 500px;
       img{
+        margin: 15px;
         width: 150px;
         height: 150px;
         border-radius: 75px;
