@@ -75,7 +75,13 @@ class Carousel {
     TweenMax.to(this.splash[this.currentSplashIndex], 2.5, {x:0});
   }
 }
-
+//--------------------------------Setup don't touch
 let carousels = document
   .querySelectorAll(".carousel")
   .forEach(carousel => new Carousel(carousel));
+
+  //------------------------------Auto Scroll for home page
+
+  window.setInterval(function() {
+  document.getElementById('home-right').click();
+  }, 8000);

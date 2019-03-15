@@ -10,6 +10,9 @@
   @media (max-width: 800px) {
     height: 400px;
   }
+  @media (max-width: 800px) {
+    height: 300px;
+  }
   .left-button,
   .right-button {
     .flex(center);
@@ -52,6 +55,9 @@
       @media (max-width: 800px) {
         width: 250px;
       }
+      @media (max-width: 800px) {
+        width: 175px;
+      }
     }
 
     .splash-info{
@@ -63,10 +69,19 @@
       width:300px;
       justify-content: center;
       @media (max-width: 800px) {
-        width: 175px;
+        width: 200px;
         flex-direction: column;
       }
-    
+      .sld3{
+        @media (max-width: 735px ) {
+          display: none;
+        }
+      }
+      .sld4 {
+        @media (max-width: 422px ) {
+          display: none;
+        }
+      }
       h1 {
         background:none;
         font-weight: 800;
@@ -82,7 +97,7 @@
       img {
         margin:10px;
         @media (max-width: 800px) {
-          width: 50%;
+          display: none;
         }
       }
     }
