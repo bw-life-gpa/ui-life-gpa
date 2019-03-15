@@ -583,13 +583,13 @@ a {
 .navBG {
   position: fixed;
   left: 0px;
-  top: 100px;
+  top: 0;
   display: none;
   z-index: 4;
   width: 100%;
   height: 100%;
   background-image: url("../../Images/DropDownCover.jpg");
-  opacity: 0.1;
+  opacity: 0.05;
   background-position: center;
   background-size: cover;
 }
