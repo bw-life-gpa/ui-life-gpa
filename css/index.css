@@ -160,6 +160,10 @@ q {
 strong {
   font-weight: 500;
 }
+a {
+  text-decoration: none;
+  text-align: center;
+}
 @font-face {
   font-family: 'PT Sans';
   font-style: italic;
@@ -577,15 +581,15 @@ strong {
   height: 80px;
 }
 .navBG {
-  position: absolute;
+  position: fixed;
   left: 0px;
-  top: 100px;
+  top: 0;
   display: none;
   z-index: 4;
   width: 100%;
   height: 100%;
   background-image: url("../../Images/DropDownCover.jpg");
-  opacity: 0.1;
+  opacity: 0.05;
   background-position: center;
   background-size: cover;
 }
