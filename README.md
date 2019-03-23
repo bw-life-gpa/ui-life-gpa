@@ -1,7 +1,7 @@
 # ui-life-gpa
 ## Welcome to International-UI Repo
 
-[live Demo](https://buildweekfeb4-issw.github.io/International-UI/#team)
+[live Demo](https://try-lifegpa.netlify.com/)
 
 Clone it to your computer using command line 
 ``` 
